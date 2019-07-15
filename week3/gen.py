@@ -1,27 +1,30 @@
 from random import shuffle
 import numpy
 
+cnt = 0
 
-## False
-# k = [5, 10, 12]
-# for i in range(0, 3):
-#     with open("./data/false" + str(i) + ".in", "w") as f:
-#         arr = numpy.random.randint(low=0, high=1<<k[i], size=1<<k[i])
-#         # arr = numpy.arange(0, 1<<k)
-#         shuffle(arr)
+# False
+k = [5, 10, 12]
+for i in range(0, 3):
+    cnt += 1
+    with open("./data/false" + str(cnt) + ".in", "w") as f:
+        arr = numpy.random.randint(low=0, high=1<<k[i], size=1<<k[i])
+        # arr = numpy.arange(0, 1<<k)
+        shuffle(arr)
 
-#         f.write(str(k[i]))
-#         f.write('\n')
-#         for a in arr:
-#             f.write(str(a))
-#             f.write(' ')
-#         f.write('\n')
+        f.write(str(k[i]))
+        f.write('\n')
+        for a in arr:
+            f.write(str(a))
+            f.write(' ')
+        f.write('\n')
 
 
-## True
+# # True
 # k = [5, 8, 9, 10, 11, 11, 12]
 # for i in range(len(k)):
-#     with open("./data/true" + str(i) + ".in", "w") as f:
+#     cnt += 1
+#     with open("./data/true" + str(cnt) + ".in", "w") as f:
 #         # arr = numpy.random.randint(low=0, high=1<<k[i], size=1<<k[i])
 #         arr = numpy.arange(0, 1<<k[i])
 #         shuffle(arr)
@@ -36,7 +39,8 @@ import numpy
 ## True-2
 k = [5, 8, 9, 10, 11, 11, 12]
 for i in range(len(k)):
-    with open("./data/true" + str(i) + ".in", "w") as f:
+    cnt += 1
+    with open("./data/true" + str(cnt) + ".in", "w") as f:
         # arr = numpy.random.randint(low=0, high=1<<k[i], size=1<<k[i])
         p = numpy.arange(0, 1<<k[i])
         shuffle(p)
