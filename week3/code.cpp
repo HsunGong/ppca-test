@@ -106,8 +106,8 @@ int readint(){
 	return x*f;
 }
  
-int n,ncnt;
-int a[5005],p[5005],q[5005],dp[5005],dq[5005],tmp[5005];
+int n,ncnt,cnt;
+int a[5005],p[5005],q[5005],dp[5005],dq[5005],tmp[5005],emp[5005];
  
 int main(){
 	n=1<<readint();
@@ -117,14 +117,10 @@ int main(){
 	memset(p,-1,sizeof(p));
 	memset(q,-1,sizeof(q));
 	while(1){
-		int now=-1;
-		for(int i=1;i<=n;i++){
-			if(p[i]<0){
-				now=i;
-				break;
-			}
-		}
-		if(now<0) break;
+		cnt=0;
+		for(int i=1;i<=n;i++) if(p[i]<0) emp[++cnt]=i;
+		if(!cnt) break;
+		int now=emp[rand()%cnt+1];
 		for(int i=0;i<n;i++){
 			if(!dp[i]&&!dq[a[now]^i]){
 				p[now]=i,q[now]=a[now]^i,dp[i]=now,dq[a[now]^i]=now;
