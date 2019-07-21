@@ -27,7 +27,8 @@ inline ll S(ll u)
 	return res;
 }
 
-int run()
+
+int main()
 {
 	ll i, j, tmp, t;
 	for (i = 1; i <= Z; i++)
@@ -77,12 +78,5 @@ int run()
 		ans += num + zero;
 	for (i = 1; i <= (A / g); i++)
 		ans += "1" + zero;
-	cout << ans << '\n';
-}
-
-int main() {
-	int size;
-	cin >> size;
-	for (int xxx = 0; xxx < size; ++xxx) 
-	run();
+	cout << ans;
 }

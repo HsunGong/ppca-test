@@ -1,5 +1,17 @@
+## USage
+
+2-versions: old(with multi data); new(with only 1 time run)
+
+1. `g++ code.cpp`(standard, can not change name or in gen.sh)
+2. `python gen.py`, gen .in files
+3. `./gen.sh`, gen .out files
+4. `g++ specialJudge.cpp -o s.out | ./s.oout < file-name`, check special !!!! not support for `-1` type (-1 is only-one solution)
+
+
+
 
 ## source http://codeforces.com/contest/1120/problem/E
+
 
 ## The very same Munchhausen
 
@@ -27,28 +39,22 @@ Otherwise print any appropriate positive integer $n$. Your number must not consi
 
 ### 输入
 
-第一行，一个整数$s$，代表接下来有几组数据。
-
-接下来$s$行，每行一个整数$a$， $(2 \leq a \leq 10^3)$。
+一个整数$a$， $(2 \leq a \leq 10^3)$。
 
 
 ### 输出
 
-一共$s$行，每行一个整数 $n$，n的位数小于$5*10^5$。如果没有这样的解，输出-1。
+一个整数 $n$，n的位数小于$5*10^5$。如果没有这样的解，输出-1。
 
-以换行号结尾。
 
 注意：我们保证如果有解，那么解的答案的位数一定小于$5*10^5$。
 
 ### 举例
 
 输入：
-1
 2
 输出：
-6
 输入：
-1
 10
 输出：
 -1
