@@ -2,13 +2,12 @@
 
 ## Usage
 
-2-versions: old(with multi data); new(with only 1 time run)
+1, catch.py to get data
+2, gen.py to gen easy data and diff data 'use error code'
+3, gen_out.py to gen answer
+4, append data with gen2.py
 
-1. `g++ code.cpp`(standard, can not change name or in gen.sh)
-2. `python gen.py`, gen .in files
-3. `./gen.sh`, gen .out files
-4. `g++ specialJudge.cpp -o s.out | ./s.oout < file-name`, check special !!!! not support for `-1` type (-1 is only-one solution)
-
+## Problem
 Geometric progression with the first element a and common ratio b is a sequence of numbers a, ab, ab2, ab3, ....
 
 You are given n integer geometric progressions. Your task is to find the smallest integer x, that is the element of all the given progressions, or else state that such integer does not exist.
@@ -29,17 +28,19 @@ If the intersection of all progressions is empty, then print  - 1, otherwise
 
 注意，上述的$i$为整数。
 
+一共有$n$组数据，代表上述问题重复$n$次。注意，$n$不会在输入中给出。
+
 ### 输入
 
-一个整数$k$， $(1 \leq k \leq 100)$。
+每一组数据形式如下：
 
-$k$行，每行两个整数 $a_i, b_i,\ 1 \leq a_i, b_i \leq 10^9$。
+第一行，一个整数$k$， $(1 \leq k \leq 100)$。
+
+之后 $k$行，每行两个整数 $a_i, b_i,\ 1 \leq a_i, b_i \leq 10^9$。
 
 ### 输出
 
-一个整数 $t = x\ mod\ 1e9 + 7$。
-
-如果没有这样的解，输出$-1$。
+一共$n$行，每行一个整数$t$，$t = x\ mod\ 1e9 + 7$，可行解$x$；如果没有这样的解，输出$-1$。
 
 ### 举例
 
@@ -47,14 +48,14 @@ $k$行，每行两个整数 $a_i, b_i,\ 1 \leq a_i, b_i \leq 10^9$。
 2
 2 2
 4 1
-输出：
-4
-输入：
 2
 2 2
 3 3
+
 输出：
+4
 -1
+
 
 ## explain
 

@@ -580,13 +580,23 @@ int main()
         }
         int res = solve(a, b);
         cout << res << endl;
-        //        int res1 = stupid_solve(a, b);
-        //        cout << res1 << endl;
-        /*        if (res != res1) {
-            cerr << res1 << endl;
-            out(a); out(b);
-            assert(0);
-        }*/
+
+        // int res1 = stupid_solve(a, b);
+        // cout << res1 << endl;
+        // if (res != res1) {
+        // cerr << res1 << endl;
+        // out(a); out(b);
+        // assert(0);
+        // }
     }
     return 0;
 }
+
+
+// int main() {
+//     int x;
+//     cin >> x;
+//     for (int i = 0; i < x  ; ++i) {
+//         run();
+//     }
+// }

@@ -1,0 +1,5947 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="X-Csrf-Token" content="eda38c331f19b95f5a7fa1898f8cdfaf"/>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=0.01"/>
+    <script type="text/javascript" src="//sta.codeforces.com/s/60739/js/jquery-1.8.3.js"></script>
+    <script type="application/javascript">
+        window.standaloneContest = false;
+        function adjustViewport() {
+            var screenWidthPx = Math.min($(window).width(), window.screen.width);
+            var siteWidthPx = 1100; // min width of site
+            var ratio = Math.min(screenWidthPx / siteWidthPx, 1.0);
+            var viewport = "width=device-width, initial-scale=" + ratio;
+            $('#viewport').attr('content', viewport);
+            var style = $('<style>html * { max-height: 1000000px; }</style>');
+            $('html > head').append(style);
+        }
+
+        if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+            adjustViewport();
+        }
+    </script>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta http-equiv="profileName" content="e1">
+    <meta name="google-site-verification" content="OTd2dN5x4nS4OPknPI9JFg36fKxjqY0i1PSfFPv_J90"/>
+    <meta property="fb:admins" content="100001352546622" />
+    <meta property="og:image" content="//sta.codeforces.com/s/60739/images/codeforces-telegram-square.png" />
+    <link rel="image_src" href="//sta.codeforces.com/s/60739/images/codeforces-telegram-square.png" />
+    <meta property="og:title" content="Submission #12873480 - Codeforces"/>
+    <meta property="og:description" content=""/>
+    
+    <meta property="og:site_name" content="Codeforces"/>
+    
+    
+    
+    <meta name="cc" content="814962149cb7ea71f5a2cc81068efc629a0babff"/>
+    
+    
+    <meta name="utc_offset" content="+03:00"/>
+    <meta name="verify-reformal" content="f56f99fd7e087fb6ccb48ef2" />
+    <title>Submission #12873480 - Codeforces</title>
+        <meta name="description" content="Codeforces. Programming competitions and contests, programming community" />
+        <meta name="keywords" content="programming algorithm contest competition informatics olympiads c++ java graphs vkcup" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="stylesheet" href="//sta.codeforces.com/s/60739/css/font-awesome.min.css" type="text/css" charset="utf-8" />
+
+        <link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Cuprum&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+
+    <link rel="shortcut icon" type="image/png" href="//sta.codeforces.com/s/60739/favicon.png">
+
+    <!--CombineResourcesFilter-->
+    <link rel="stylesheet" href="//sta.codeforces.com/s/60739/css/prettify.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/60739/css/clear.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/60739/css/style.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/60739/css/ttypography.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/60739/css/problem-statement.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/60739/css/second-level-menu.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/60739/css/roundbox.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/60739/css/datatable.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/60739/css/table-form.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/60739/css/topic.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/60739/css/jquery.jgrowl.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/60739/css/facebox.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/60739/css/jquery.wysiwyg.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/60739/css/jquery.autocomplete.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/60739/css/codeforces.datepick.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/60739/css/colorbox.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/60739/css/jquery.drafts.css" type="text/css" charset="utf-8" />
+        <link rel="stylesheet" href="//sta.codeforces.com/s/60739/css/status.css" type="text/css" charset="utf-8" />
+        <link rel="stylesheet" href="//sta.codeforces.com/s/60739/css/community.css" type="text/css" charset="utf-8" />
+
+    <!-- MathJax -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$$$','$$$']], displayMath: [['$$$$$$','$$$$$$']]}
+    });
+    </script>
+    <script type="text/javascript" async
+            src="https://assets.codeforces.com/mathjax/MathJax.js?config=TeX-AMS_HTML-full"
+    >
+    </script>
+    <!-- /MathJax -->
+
+    <script type="text/javascript" src="//sta.codeforces.com/s/60739/js/prettify/prettify.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/60739/js/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/60739/js/pushstream.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/60739/js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/60739/js/jquery.lavalamp.min.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/60739/js/jquery.jgrowl.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/60739/js/jquery.swipe.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/60739/js/facebox.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/60739/js/jquery.wysiwyg.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/60739/js/controls/wysiwyg.colorpicker.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/60739/js/controls/wysiwyg.table.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/60739/js/controls/wysiwyg.image.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/60739/js/controls/wysiwyg.link.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/60739/js/jquery.autocomplete.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/60739/js/jquery.datepick.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/60739/js/jquery.ie6blocker.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/60739/js/jquery.colorbox-min.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/60739/js/jquery.ba-bbq.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/60739/js/jquery.drafts.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/60739/js/clipboard.min.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/60739/js/autosize.min.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/60739/js/sjcl.js"></script>
+    <script type="text/javascript" src="/scripts/d6d954cf856d83ed74ae2e562c64e080/en/codeforces-options.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/60739/js/codeforces.js?v=20160131"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/60739/js/EventCatcher.js?v=20160131"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/60739/js/preparedVerdictFormats-en.js"></script>
+    <!--/CombineResourcesFilter-->
+
+    <link rel="stylesheet" href="//sta.codeforces.com/s/60739/markitup/skins/markitup/style.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="//sta.codeforces.com/s/60739/markitup/sets/markdown/style.css" type="text/css" charset="utf-8" />
+
+
+    <script type="text/javascript" src="//sta.codeforces.com/s/60739/markitup/jquery.markitup.js"></script>
+    <script type="text/javascript" src="//sta.codeforces.com/s/60739/markitup/sets/markdown/set.js"></script>
+
+    <!--[if IE]>
+    <style>
+        #sidebar {
+            padding-left: 1em;
+            margin: 1em 1em 1em 0;
+        }
+    </style>
+    <![endif]-->
+
+
+
+</head>
+<body><span style='display:none;' class='csrf-token' data-csrf='eda38c331f19b95f5a7fa1898f8cdfaf'>&nbsp;</span>
+<div class="button-up" style="display: none; opacity: 0.7; width: 50px; height:100%; position: fixed; left: 0; top: 0; cursor: pointer; text-align: center; line-height: 35px; color: #d3dbe4; font-weight: bold; font-size: 3.0rem;"><i class="icon-circle-arrow-up"></i></div>
+<div class="verdictPrototypeDiv" style="display: none;"></div>
+
+<!-- Codeforces JavaScripts. -->
+<script type="text/javascript">
+    String.prototype.hashCode = function() {
+        var hash = 0, i, chr;
+        if (this.length === 0) return hash;
+        for (i = 0; i < this.length; i++) {
+            chr   = this.charCodeAt(i);
+            hash  = ((hash << 5) - hash) + chr;
+            hash |= 0; // Convert to 32bit integer
+        }
+        return hash;
+    };
+
+    var queryMobile = Codeforces.queryString.mobile;
+    if (queryMobile === "true" || queryMobile === "false") {
+        Codeforces.putToStorage("useMobile", queryMobile == "true");
+    } else {
+        var useMobile = Codeforces.getFromStorage("useMobile");
+        if (useMobile === true || useMobile === false) {
+            if (useMobile != false) {
+                Codeforces.redirect(Codeforces.updateUrlParameter(document.location.href, "mobile", useMobile));
+            }
+        }
+    }
+</script>
+<script type="text/javascript">
+    if (window.parent.frames.length > 0) {
+        window.stop();
+    }
+</script>
+
+
+<script type="text/javascript">
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '554666954583323',
+            xfbml      : true,
+            version    : 'v2.8'
+        });
+        FB.AppEvents.logPageView();
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+    (function () {
+        jQuery.expr[':'].containsCI = function(elem, index, match) {
+            return !match || !match.length || match.length < 4 || !match[3] || (
+                    elem.textContent || elem.innerText || jQuery(elem).text() || ''
+            ).toLowerCase().indexOf(match[3].toLowerCase()) >= 0;
+        }
+    }(jQuery));
+
+    $.ajaxPrefilter(function(options, originalOptions, xhr) {
+        var csrf = Codeforces.getCsrfToken();
+
+        if (csrf) {
+            var data = originalOptions.data;
+            if (originalOptions.data !== undefined) {
+                if (Object.prototype.toString.call(originalOptions.data) === '[object String]') {
+                    data = $.deparam(originalOptions.data);
+                }
+            } else {
+                data = {};
+            }
+            options.data = $.param($.extend(data, { csrf_token: csrf }));
+        }
+    });
+
+    window.getCodeforcesServerTime = function(callback) {
+        $.post("/data/time", {}, callback, "json");
+    }
+
+    window.updateTypography = function () {
+        $("div.ttypography code").addClass("tt");
+        $("div.ttypography pre>code").addClass("prettyprint").removeClass("tt");
+        $("div.ttypography table").addClass("bordertable");
+        prettyPrint();
+    }
+
+    $.ajaxSetup({ scriptCharset: "utf-8" ,contentType: "application/x-www-form-urlencoded; charset=UTF-8", headers: {
+        'X-Csrf-Token': Codeforces.getCsrfToken()
+    }});
+
+    window.updateTypography();
+
+    Codeforces.signForms();
+
+    setTimeout(function() {
+        $(".second-level-menu-list").lavaLamp({
+            fx: "backout",
+            speed: 1000
+        });
+    }, 0);
+
+
+    Codeforces.countdown();
+    $("a[rel='photobox']").colorbox();
+
+
+    function showAnnouncements(json) {
+        //info("j=" + JSON.stringify(json));
+
+        if (json.t != "a") {
+            return;
+        }
+        // console.log("Got announcement from channel");
+        setTimeout(function() {
+            Codeforces.showAnnouncements(json.d, "en");
+        }, Math.random() * 500);
+    }
+
+    function showEventCatcherUserMessage(json) {
+        if (json.t == "s") {
+            var points = json.d[5];
+            var passedTestCount = json.d[7];
+            var judgedTestCount = json.d[8];
+            var verdict = preparedVerdictFormats[json.d[12]];
+            var verdictPrototypeDiv = $(".verdictPrototypeDiv");
+            verdictPrototypeDiv.html(verdict);
+            if (judgedTestCount != null && judgedTestCount != undefined) {
+                verdictPrototypeDiv.find(".verdict-format-judged").text(judgedTestCount);
+            }
+            if (passedTestCount != null && passedTestCount != undefined) {
+                verdictPrototypeDiv.find(".verdict-format-passed").text(passedTestCount);
+            }
+            if (points != null && points != undefined) {
+                verdictPrototypeDiv.find(".verdict-format-points").text(points);
+            }
+            Codeforces.showMessage(verdictPrototypeDiv.text());
+        }
+    }
+
+    $(".clickable-title").each(function() {
+        var title = $(this).attr("data-title");
+        if (title) {
+            var tmp = document.createElement("DIV");
+            tmp.innerHTML = title;
+            $(this).attr("title", tmp.textContent || tmp.innerText || "");
+        }
+    });
+
+    $(".clickable-title").click(function() {
+        var title = $(this).attr("data-title");
+        if (title) {
+            Codeforces.alert(title);
+        } else {
+            Codeforces.alert($(this).attr("title"));
+        }
+    }).css("position", "relative").css("bottom", "3px");
+
+
+    Codeforces.reformatTimes();
+
+    //Codeforces.initializePubSub();
+    if (window.codeforcesOptions.subscribeServerUrl) {
+        window.eventCatcher = new EventCatcher(
+            window.codeforcesOptions.subscribeServerUrl,
+            [
+                Codeforces.getGlobalChannel(),
+                Codeforces.getUserChannel(),
+                Codeforces.getUserShowMessageChannel(),
+                Codeforces.getContestChannel(),
+                Codeforces.getParticipantChannel(),
+                Codeforces.getTalkChannel()
+            ]
+        );
+
+        if (Codeforces.getParticipantChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getParticipantChannel(), function(json) {
+                showAnnouncements(json);
+            });
+        }
+
+        if (Codeforces.getContestChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getContestChannel(), function(json) {
+                showAnnouncements(json);
+            });
+        }
+
+        if (Codeforces.getGlobalChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getGlobalChannel(), function(json) {
+                showAnnouncements(json);
+            });
+        }
+
+        if (Codeforces.getUserChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getUserChannel(), function(json) {
+                showAnnouncements(json);
+            });
+        }
+
+        if (Codeforces.getUserShowMessageChannel()) {
+            window.eventCatcher.subscribe(Codeforces.getUserShowMessageChannel(), function(json) {
+                showEventCatcherUserMessage(json);
+            });
+        }
+    }
+
+    Codeforces.setupContestTimes("/data/contests");
+    Codeforces.setupSpoilers();
+    Codeforces.setupTutorials("/data/problemTutorial");
+        });
+    </script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-743380-5']);
+  _gaq.push(['_trackPageview']);
+
+  (function () {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = (document.location.protocol == 'https:' ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+<div id="body">
+        
+
+<div class="side-bell" style="visibility: hidden; display: none; opacity: 0.7; width: 40px; position: fixed; right: 0; top: 0; cursor: pointer; text-align: center; line-height: 35px; color: #d3dbe4; font-weight: bold; font-size: 1.5rem;">
+    <span class="icon-stack" style="width: 100%;">
+        <i class="icon-circle icon-stack-base"></i>
+        <i class="icon-bell-alt icon-light"></i>
+    </span>
+    <br/>
+    <span class="side-bell__count" style="position: relative; top: -10px;"></span>
+</div>
+
+
+<div id="header" style="position: relative;">
+    <div style="float:left;">
+            <div><a href="/aimfund2015"><img src="//assets.codeforces.com/images/aimfund-logo.png" style="width:180px;"/></a></div>
+    </div>
+    <div class="lang-chooser">
+        <div style="text-align: right;">
+            <a href="?locale=en"><img src="//sta.codeforces.com/s/60739/images/flags/24/gb.png" title="In English" alt="In English"/></a>
+            <a href="?locale=ru"><img src="//sta.codeforces.com/s/60739/images/flags/24/ru.png" title="По-русски" alt="По-русски"/></a>
+        </div>
+
+        <div >
+                        <a href="/enter?back=%2Fcontest%2F571%2Fsubmission%2F12873480">Enter</a>
+                     | 
+                        <a href="/register">Register</a>
+                    
+        </div>
+
+
+
+    </div>
+    <br style="clear: both;"/>
+</div>
+        
+
+    <div class="roundbox menu-box" style="">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+            <div class="roundbox-lb">&nbsp;</div>
+            <div class="roundbox-rb">&nbsp;</div>
+    <div class="menu-list-container">
+    <ul class="menu-list main-menu-list">
+                <li class=""><a href="/">Home</a></li>
+                <li class=""><a href="/top">Top</a></li>
+                <li class="current"><a href="/contests">Contests</a></li>
+                <li class=""><a href="/gyms">Gym</a></li>
+                <li class=""><a href="/problemset">Problemset</a></li>
+                <li class=""><a href="/groups">Groups</a></li>
+                <li class=""><a href="/ratings">Rating</a></li>
+                <li class=""><a href="/api/help">API</a></li>
+                <li class=""><a href="/help">Help</a></li>
+                <li class=""><a href="/calendar">Calendar</a></li>
+    </ul>
+        <form method="post" action="/search"><input type='hidden' name='csrf_token' value='eda38c331f19b95f5a7fa1898f8cdfaf'/>
+            <input class="search" name="query" data-isPlaceholder="true" value=""/>
+        </form>
+    <br style="clear: both;"/>
+</div>
+
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("input.search").focus(function () {
+                if ($(this).attr("data-isPlaceholder") === "true") {
+                    $(this).val("");
+                    $(this).removeAttr("data-isPlaceholder");
+                }
+            });
+        });
+    </script>
+            <br style="height: 3em; clear: both;"/>
+
+        <div style="position: relative;">
+                <div id="pageContent">
+                    <div class="second-level-menu">
+<ul class="second-level-menu-list">
+        <li><a
+                                        href="/contest/571">Problems</a></li>
+        <li><a
+                                        href="/contest/571/submit">Submit Code</a></li>
+        <li><a
+                                        href="/contest/571/my">My Submissions</a></li>
+        <li class="current selectedLava"><a
+                                        href="/contest/571/status">Status</a></li>
+        <li><a
+                                        href="/contest/571/hacks">Hacks</a></li>
+        <li><a
+                                        href="/contest/571/room/1">Room</a></li>
+        <li><a
+                                        href="/contest/571/standings">Standings</a></li>
+        <li><a
+                                        href="/contest/571/customtest">Custom Invocation</a></li>
+</ul>
+</div>
+
+    <style>
+        .diagnosticsResultMessage {
+            font-weight: bold;
+            margin: 1em 0 0;
+        }
+
+        .diagnosticsResultMessage .diagnosticsMessageType {
+            color: #E65100;
+        }
+
+        .source-copier {
+            font-size: 1.2rem;
+            float: right;
+            color: #888 !important;
+            cursor: pointer;
+            border: 1px solid rgb(185, 185, 185);
+            padding: 3px;
+            margin: 1px;
+            margin-right: 3px;
+            line-height: 1.1rem;
+            text-transform: none;
+        }
+
+        .source-copier:hover {
+            background-color: #def;
+        }
+    </style>
+
+
+
+<div class="datatable"
+     
+     style="background-color: #E1E1E1; padding-bottom: 3px;">
+            <div class="lt">&nbsp;</div>
+            <div class="rt">&nbsp;</div>
+            <div class="lb">&nbsp;</div>
+            <div class="rb">&nbsp;</div>
+
+            <div style="padding: 4px 0 0 6px;font-size:1.4rem;position:relative;">
+                General
+
+                <div style="position:absolute;right:0.25em;top:0.35em;">
+                    <span style="padding:0;position:relative;bottom:2px;" class="rowCount"></span>
+
+                    <img class="closed" src="//sta.codeforces.com/s/60739/images/icons/control.png"/>
+
+                    <span class="filter" style="display:none;">
+                        <img class="opened" src="//sta.codeforces.com/s/60739/images/icons/control-270.png"/>
+                        <input style="padding:0;position:relative;bottom:2px;border:1px solid #aaa;height:17px;font-size:1.3rem;"/>
+                    </span>
+                </div>
+            </div>
+            <div style="background-color: white;margin:0.3em 3px 0 3px;position:relative;">
+            <div class="ilt">&nbsp;</div>
+            <div class="irt">&nbsp;</div>
+            <table class="">
+<tr>
+    <th style="width:2em;">#</th>
+    <th style="width:12em;">Author</th>
+    <th style="width:2em;">Problem</th>
+    <th style="width:2em;">Lang</th>
+    <th style="width:8em;">Verdict</th>
+        <th style="width:2em;">Time</th>
+        <th style="width:2em;">Memory</th>
+    <th style="width:4em;">Sent</th>
+    <th style="width:4em;">Judged</th>
+    <th style="width:4em;">&nbsp;</th>
+</tr>
+<tr>
+    <td>12873480</td>
+    <td>
+            Practice:<br/>
+<a href="/profile/Kostroma" title="International Grandmaster Kostroma" class="rated-user user-red">Kostroma</a>    </td>
+    <td>
+        <a title="E - Geometric Progressions" href="/contest/571/problem/E">571E</a>
+         - <span title="problem revision">40</span>
+    </td>
+    <td>
+    GNU C++11
+    </td>
+    <td>
+    <span class='verdict-accepted'>Accepted</span>
+    </td>
+        <td>
+            15 ms
+        </td>
+        <td>
+            16 KB
+        </td>
+    <td>2015-09-06 17:14:25</td>
+    <td>2015-09-06 17:14:25</td>
+    <td>
+        <button style="padding: 0.05em; width: 80px;" class="showDiff" title="Compare">Compare</button>
+    </td>
+</tr>
+            </table>
+            </div>
+        </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+                // Create new ':containsIgnoreCase' selector for search
+                jQuery.expr[':'].containsIgnoreCase = function(a, i, m) {
+                    return jQuery(a).text().toUpperCase()
+                            .indexOf(m[3].toUpperCase()) >= 0;
+                };
+
+                if (window.updateDatatableFilter == undefined) {
+                    window.updateDatatableFilter = function(i) {
+                        var parent = $(i).parent().parent().parent().parent();
+                        $("tr.no-items", parent).remove();
+                        $("tr", parent).hide().removeClass('visible');
+                        var text = $(i).val();
+                        if (text) {
+                            $("tr" + ":containsIgnoreCase('" + text + "')", parent).show().addClass('visible');
+                        } else {
+                            parent.find(".rowCount").text("");
+                            $("tr", parent).show().addClass('visible');
+                        }
+
+                        var found = false;
+                        var visibleRowCount = 0;
+                        $("tr", parent).each(function () {
+                            if (!found) {
+                                if ($(this).find("th").size() > 0) {
+                                    $(this).show().addClass('visible');
+                                    found = true;
+                                }
+                            }
+                            if ($(this).hasClass('visible')) {
+                                visibleRowCount++;
+                            }
+                        });
+                        if (text) {
+                            parent.find(".rowCount").text("Matches: " + (visibleRowCount - (found ? 1 : 0)));
+                        }
+                        if (visibleRowCount == (found ? 1 : 0)) {
+                            $("<tr class='no-items visible'><td style=\"text-align:left;\"colspan=\"32\">No items<\/td><\/tr>").appendTo($(parent).find('table'));
+                        }
+                        $(parent).find("tr td").removeClass("dark");
+                        $(parent).find("tr.visible:odd td").addClass("dark");
+                    }
+
+                    $(".datatable .closed").click(function () {
+                        var parent = $(this).parent();
+                        $(this).hide();
+                        $(".filter", parent).fadeIn(function () {
+                            $("input", parent).val("").focus().css("border", "1px solid #aaa");
+                        });
+                    });
+
+                    $(".datatable .opened").click(function () {
+                        var parent = $(this).parent().parent();
+                        $(".filter", parent).fadeOut(function () {
+                            $(".closed", parent).show();
+                            $("input", parent).val("").each(function () {
+                                window.updateDatatableFilter(this);
+                            });
+                        });
+                    });
+
+                    $(".datatable .filter input").keyup(function(e) {
+                        window.updateDatatableFilter(this);
+                        e.preventDefault();
+                        e.stopPropagation();
+                    });
+
+                    $(".datatable table").each(function () {
+                        var found = false;
+                        $("tr", this).each(function () {
+                            if (!found && $(this).find("th").size() == 0) {
+                                found = true;
+                            }
+                        });
+                        if (!found) {
+                            $("<tr class='no-items visible'><td style=\"text-align:left;\"colspan=\"32\">No items<\/td><\/tr>").appendTo(this);
+                        }
+                    });
+
+                    // Applies styles to datatables.
+                    $(".datatable").each(function () {
+                        $(this).find("tr:first th").addClass("top");
+                        $(this).find("tr:last td").addClass("bottom");
+                        $(this).find("tr:odd td").addClass("dark");
+                        $(this).find("tr td:first-child, tr th:first-child").addClass("left");
+                        $(this).find("tr td:last-child, tr th:last-child").addClass("right");
+                    });
+
+                    $(".datatable table.tablesorter").each(function () {
+                        $(this).bind("sortEnd", function () {
+                            $(".datatable").each(function () {
+                                $(this).find("th, td")
+                                    .removeClass("top").removeClass("bottom")
+                                    .removeClass("left").removeClass("right")
+                                    .removeClass("dark");
+                                $(this).find("tr:first th").addClass("top");
+                                $(this).find("tr:last td").addClass("bottom");
+                                $(this).find("tr:odd td").addClass("dark");
+                                $(this).find("tr td:first-child, tr th:first-child").addClass("left");
+                                $(this).find("tr td:last-child, tr th:last-child").addClass("right");
+                            });
+                        });
+                    });
+                }
+        });
+    </script>
+
+    <div class="roundbox SubmissionDetailsFrameRoundBox-12873480" style="margin-top:2em;font-size:1.1rem;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">&rarr; Source
+            <div class="top-links">
+            </div>
+        </div>
+    <pre id="program-source-text" class="prettyprint lang-cpp linenums program-source" style="padding: 0.5em;">#include &lt;cstdio&gt;
+#include &lt;cstdlib&gt;
+#include &lt;cassert&gt;
+#include &lt;iostream&gt;
+#include &lt;set&gt;
+#include &lt;vector&gt;
+#include &lt;cstring&gt;
+#include &lt;string&gt;
+#include &lt;algorithm&gt;
+#include &lt;numeric&gt;
+#include &lt;cmath&gt;
+#include &lt;complex&gt;
+#include &lt;map&gt;
+#include &lt;queue&gt;
+#include &lt;time.h&gt;
+using namespace std;
+typedef long long ll;
+typedef vector&lt;int&gt; vi;
+typedef vector&lt;ll&gt; vl;
+typedef vector&lt;vi&gt; vvi;
+typedef vector&lt;vl&gt; vvl;
+typedef vector&lt;double&gt; vd;
+typedef vector&lt;vd&gt; vvd;
+typedef pair&lt;int, int&gt; pii;
+typedef pair&lt;double, double&gt; pdd;
+typedef vector&lt;pii&gt; vii;
+typedef vector&lt;string&gt; vs;
+const int mod = 1000000007;
+time_t BEGIN;
+
+void out(const vi &amp; v) {
+    for (int i = 0; i &lt; v.size(); ++i) cerr &lt;&lt; v[i] &lt;&lt; &#39; &#39;;
+    cerr &lt;&lt; endl;
+}
+
+ll mpow(ll x, ll n) {
+    ll res = 1;
+    while (n) {
+        if (n &amp; 1) res = res * x % mod;
+        n /= 2;
+        x = x * x % mod;
+    }
+    return res;
+}
+
+ll inv (ll a, ll b) {
+    a %= b;
+    ll b0 = b;
+    ll xa = 1, xb = 0, ya = 0, yb = 1;
+    while (a % b != 0) {
+        ll t = a / b;
+        a = (a - t * b) % b0;
+        xa = (xa - t * ya) % b0;
+        xb = (xb - t * yb) % b0;
+        swap(a, b);
+        swap(xa, ya);
+        swap(xb, yb);
+    }
+    ya %= b0;
+    if (ya &lt; 0) ya += b0;
+    return ya;
+}
+
+ll lcm(ll x, ll y) {
+    ll d = __gcd(x, y);
+    x /= d;
+    if (y) assert(x &lt;= 1e18 / y);
+    return x * y;
+}
+
+class AP {
+public:
+    AP(ll s, ll T): s(s), T(T) {}
+    AP&amp; operator=(const AP &amp; a) { T = a.T; s = a.s; return *this; }
+    void out() {
+        cerr &lt;&lt; s &lt;&lt; &quot;+&quot; &lt;&lt; T &lt;&lt; &quot;k\n&quot;;
+    }
+    ll T, s;
+};
+
+AP strong_intersect(AP a, AP b) {
+    if (a.T == b.T) {
+        if (a.s == b.s) return a;
+        return AP(-1, -1);
+    }
+    if (a.s == b.s) return AP(a.s, 0);
+    if (a.s &lt; b.s) swap(a, b);
+    ll num = a.s - b.s;
+    ll den = b.T - a.T;
+    if (den &lt; 0 || num % den != 0) return AP(-1, -1);
+    ll index = num / den;
+    return AP(a.s + a.T*index, 0);
+}
+   
+ll mul(ll x, ll y, ll z) {
+    if (x == 0 || y == 0) return 0;
+    if (y &lt; 0) {
+        x = -x;
+        y = -y;
+    }
+    ll res = 0;
+    while (y) {
+        if (y &amp; 1) res = (res + x) % z;
+        y /= 2;
+        x = (x + x) % z;
+    }
+    return res;
+}
+
+AP intersect(AP a, AP b) {
+//    a.out(); b.out();
+    if (a.s &lt; 0 || b.s &lt; 0) return AP(-1, -1);
+    if (a.T == 0 &amp;&amp; b.T == 0) {
+        if (a.s == b.s) return a;
+        return AP(-1, -1);
+    }
+    if (b.T == 0) swap(a, b);
+    if (a.T == 0) {
+        if (b.s &gt; a.s || (a.s - b.s) % b.T != 0) return AP(-1, -1);
+        return a;
+    }
+    ll d = __gcd(a.T, b.T);
+    if (a.s % d != b.s % d) return AP(-1, -1);
+    if (a.s &lt; b.s) swap(a, b);
+    ll x = (b.s - a.s) / d; // x &lt;= 0
+    ll y = b.T / d;
+    ll z = a.T / d; // (x + y*i) / z
+    assert(y &lt;= 1e18 / z);
+    ll r = mul((-x) % z, inv(y, z), z);
+    ll mi = r + z*max(0LL, (-x - r*y + z*y - 1) / (z*y));
+    assert(mi &lt;= 1e18 / b.T);
+//    cerr &lt;&lt; x &lt;&lt; &#39; &#39; &lt;&lt; y &lt;&lt; &#39; &#39; &lt;&lt; z &lt;&lt; &#39; &#39; &lt;&lt; mi &lt;&lt; endl;
+    AP res(b.s + b.T * mi, lcm(a.T, b.T));
+//    cerr &lt;&lt; &quot;res &quot;; res.out();
+    return res;
+}
+
+vi uniq_merge(const vi &amp; a, const vi &amp; b) {
+    vi c(a.size() + b.size());
+    merge(a.begin(), a.end(), b.begin(), b.end(), c.begin());
+    c.resize(unique(c.begin(), c.end()) - c.begin());
+    return c;
+}
+
+int ord(int a, int p) {
+    int cnt = 0;
+    while (a % p == 0) {
+        ++cnt;
+        a /= p;
+    }
+    return cnt;
+}
+
+vi erat;
+
+vi get_primes(int n) {
+    vi primes;
+    for (int i = 2; i*i &lt;= n; ++i) if (n % i == 0) {
+        primes.push_back(i);
+        while (n % i == 0) n /= i;
+    }
+    if (n &gt; 1) primes.push_back(n);
+    sort(primes.begin(), primes.end());
+    return primes;
+}
+
+ll fix(int A0, int B0, ll fix0, int A1, int B1, const vi &amp; curp, bool &amp; fail) {
+    ll fix = -1;
+    for (auto p : curp) {
+        AP a0(ord(A0, p), ord(B0, p));
+        if (fix0 &gt;= 0) {
+            a0.s = a0.s + a0.T * fix0;
+            a0.T = 0;
+        }
+        AP a1(ord(A1, p), ord(B1, p));
+        AP a2 = intersect(a0, a1);
+        if (a2.s &lt; 0) {
+            fail = true;
+            return -1;
+        }
+        if (a0.T == 0 &amp;&amp; a1.T == 0 &amp;&amp; a0.s != a1.s) {
+            fail = true;
+            return -1;
+        }
+        if (a2.T == 0 &amp;&amp; a1.T != 0) {
+            ll nfix = (a2.s - a1.s) / a1.T;
+            if (fix != -1 &amp;&amp; fix != nfix) {
+                fail = true;
+                return -1;
+            }
+            fix = nfix;
+        }
+    }
+    return fix;
+}
+
+AP trace(AP a, AP b) {
+    return AP((a.s - b.s) / b.T, a.T / b.T);
+}
+
+AP subsec(AP a, AP b) {
+    return AP(a.s + a.T * b.s, a.T * b.T);
+}
+
+AP common(int A0, int B0, int A1, int B1, const vi &amp; curp) {
+    bool fail = false;
+    ll fix1 = fix(A0, B0, -1, A1, B1, curp, fail);
+//    cerr &lt;&lt; &quot;fix1 &quot; &lt;&lt; fix1 &lt;&lt; &#39; &#39; &lt;&lt; fail &lt;&lt; endl;
+    ll fix0 = fix(A1, B1, fix1, A0, B0, curp, fail);
+//    cerr &lt;&lt; &quot;fix0 &quot; &lt;&lt; fix0 &lt;&lt; &#39; &#39; &lt;&lt; fail &lt;&lt; endl;
+    if (fail) {
+        return AP(-1, -1);
+    }
+    if (fix0 &gt;= 0) {
+        ll fix1 = fix(A0, B0, fix0, A1, B1, curp, fail);
+        if (fail || fix1 &lt; 0) {
+            return AP(-1, -1);
+        } else {
+            return AP(fix0, 0);
+        }
+    }
+    AP intersection0(0, 1);
+    AP intersection1(0, 1);
+    bool was = false;
+    for (auto p : curp) {
+        AP a0(ord(A0, p), ord(B0, p));
+        AP a1(ord(A1, p), ord(B1, p));
+        AP a2 = intersect(a0, a1);
+        if (a2.s &lt; 0) return AP(-1, -1);
+        if (a0.T == 0 &amp;&amp; a1.T == 0) continue;
+        AP new0 = trace(a2, a0);//((a2.s - a0.s) / a0.T, a2.T / a0.T);
+        AP new1 = trace(a2, a1);//((a2.s - a1.s) / a1.T, a2.T / a1.T);
+        if (!was) {
+            intersection0 = new0;
+            intersection1 = new1;
+            was = 1;
+        } else {
+//            cerr &lt;&lt; &quot;new &quot;; new0.out(); new1.out();
+            AP x0 = intersect(new0, intersection0);
+            AP x1 = intersect(new1, intersection1);
+            if (x0.s &lt; 0 || x1.s &lt; 0) return AP(-1, -1);
+            AP subold0 = trace(x0, intersection0);
+            AP subold1 = trace(x1, intersection1);
+            AP subold2 = intersect(subold0, subold1);
+            if (subold2.s &lt; 0) return AP(-1, -1);
+            intersection0 = subsec(intersection0, subold2);
+            intersection1 = subsec(intersection1, subold2);
+//            cerr &lt;&lt; &quot;traced inter &quot;; intersection0.out(); intersection1.out();
+            AP subnew0 = trace(intersection0, new0);
+            AP subnew1 = trace(intersection1, new1);
+            AP subnew2 = strong_intersect(subnew0, subnew1);
+//            cerr &lt;&lt; &quot;subnew &quot;; subnew0.out(); subnew1.out(); subnew2.out();
+            if (subnew2.s &lt; 0) return AP(-1, -1);
+            intersection0 = subsec(new0, subnew2);
+            intersection1 = subsec(new1, subnew2);
+        }
+//        cerr &lt;&lt; &quot;inter &quot;; intersection0.out(); intersection1.out();
+        if (intersection1.T == 0) {
+            ll fix1 = intersection1.s;
+            ll fix0 = fix(A1, B1, fix1, A0, B0, curp, fail);
+            if (fail || fix0 &lt; 0) return AP(-1, -1);
+            intersection0 = AP(fix0, 0);
+        }
+        if (intersection0.T == 0) {
+            ll fix0 = intersection0.s;
+            ll fix1 = fix(A0, B0, fix0, A1, B1, curp, fail);
+            if (fail || fix1 &lt; 0) {
+                return AP(-1, -1);
+            } else {
+                return AP(fix0, 0);
+            }
+        }
+        if (intersection0.s &lt; 0 || intersection1.s &lt; 0) return AP(-1, -1);
+    }
+    return intersection0;
+}
+
+bool check_geom(int a, int b, ll n) {
+    if (n % a) return false;
+    n /= a;
+    if (b == 1) {
+        return n == 1;
+    }
+    while (n &gt; 1) {
+        if (n % b) return false;
+        n /= b;
+    }
+    return n == 1;
+}
+
+bool check_all_geoms(const vi &amp; a, const vi &amp; b, ll n) {
+    for (int j = 0; j &lt; a.size(); ++j) {
+        if (!check_geom(a[j], b[j], n)) return false;
+    }
+    return true;
+}
+
+ll check_stupid(const vi &amp; a, const vi &amp; b, int start) {
+    ll n = a[start];
+    while (1) {
+        bool ok = true;
+        for (int i = 0; i &lt; a.size(); ++i) {
+            if (!check_geom(a[i], b[i], n)) {
+                ok = false;
+                break;
+            }
+        }
+        if (ok) {
+            return n%mod;
+        }
+        if (n &gt; 1e18 / b[start] || b[start] == 1) break;
+        n *= b[start];
+    }
+    return -1;
+}
+
+vi factor(int n, const vi &amp; p) {
+    vi pw(p.size());
+    for (int i = 0; i &lt; p.size(); ++i) {
+        while (n % p[i] == 0) {
+            n /= p[i];
+            ++pw[i];
+        }
+    }
+    return pw;
+}
+
+int solve(const vi &amp; a, const vi &amp; b) {
+    int n = a.size();
+    for (int i = 0; i &lt; n; ++i) if (b[i] == 1) {
+        for (int j = 0; j &lt; n; ++j) {
+            if (!check_geom(a[j], b[j], a[i])) return -1;
+        }
+        return a[i];
+    }
+    vvi primes(n);
+    for (int i = 0; i &lt; n; ++i) {
+        primes[i] = uniq_merge(get_primes(a[i]), get_primes(b[i]));
+    }
+    AP intersection(0, 1);
+    for (int i = 1; i &lt; n; ++i) {
+        vi curp = uniq_merge(primes[0], primes[i]);
+        intersection = intersect(intersection, common(a[0], b[0], a[i], b[i], curp));
+        if (intersection.s &lt; 0) return -1;
+    }
+    return a[0]*mpow(b[0], intersection.s) % mod;
+}
+
+int stupid_solve(vi a, vi b) {
+    vii ts(a.size());
+    for (int i = 0; i &lt; a.size(); ++i) ts[i] = pii(a[i], b[i]);
+    sort(ts.begin(), ts.end());
+    ts.resize(unique(ts.begin(), ts.end()) - ts.begin());
+    a.resize(ts.size());
+    b.resize(ts.size());
+    for (int i = 0; i &lt; a.size(); ++i) {
+        a[i] = ts[i].first;
+        b[i] = ts[i].second;
+    }
+/*    int d = a[0];
+    for (int i = 0; i &lt; a.size(); ++i) {
+        d = __gcd(a, a[i]);
+    }
+    for (int i = 0; i &lt; a.size(); ++i) {
+        a[i] / d;
+    }*/
+    for (int i = 0; i &lt; a.size(); ++i) if (b[i] == 1) {
+        for (int j = 0; j &lt; a.size(); ++j) {
+            if (!check_geom(a[j], b[j], a[i])) return -1;
+        }
+        return a[i];
+    }
+    for (int i = 0; i &lt; a.size(); ++i) {
+        if (b[i] &gt; b[0]) {
+            swap(a[0], a[i]);
+            swap(b[0], b[i]);
+            break;
+        }
+    }
+    vvi primes(a.size());
+    vvi primesa(a.size());
+    vvi primesb(a.size());
+    for (int i = 0; i &lt; a.size(); ++i) {
+        primes[i] = uniq_merge(get_primes(a[i]), get_primes(b[i]));
+        primesa[i] = get_primes(a[i]);
+        primesb[i] = get_primes(b[i]);
+    }
+    for (int i = 1; i &lt; a.size(); ++i) {
+        if (primes[i] != primes[i-1]) {
+            int n = (primes[i].size() &gt; primes[i-1].size()) ? a[i] : a[i-1];
+            if (!check_all_geoms(a, b, n)) return -1;
+            else return n;
+        }
+        if (primesb[i] != primesb[i-1]) {
+            int start = (primesb[i].size() &gt; primesb[i-1].size()) ? i : i-1;
+            return check_stupid(a, b, start);
+        }
+    }
+    for (auto p : primesa[0]) if (!binary_search(primesb[0].begin(), primesb[0].end(), p)) {
+        for (int i = 1; i &lt; a.size(); ++i) {
+            if (ord(a[i], p) != ord(a[i-1], p)) return -1;   
+        }
+    }
+    vvi pa(a.size()), pb(b.size());
+    for (int i = 0; i &lt; a.size(); ++i) {
+        pa[i] = factor(a[i], primesb[0]);
+        pb[i] = factor(b[i], primesb[0]);
+    }
+    vi v = pa[0];
+    for (int pwb = 0; ; ++pwb) {
+        double passed_time = (clock() - BEGIN) / (double)CLOCKS_PER_SEC;
+        if (passed_time &gt; 0.01) break;
+        bool ok = true;
+        for (int i = 1; i &lt; a.size() &amp;&amp; ok; ++i) {
+            int div = 0;
+            for (int j = 0; j &lt; v.size(); ++j) {
+                if (v[j] &lt; pa[i][j] || (v[j] - pa[i][j]) % pb[i][j] != 0) {
+                    ok = false;
+                    break;
+                }
+                int ndiv = (v[j] - pa[i][j]) / pb[i][j];
+                if (j &amp;&amp; ndiv != div) {
+                    ok = false;
+                    break;
+                }
+                div = ndiv;
+            }
+        }
+        if (ok) {
+            return a[0] * mpow(b[0], pwb) % mod;
+        }
+        for (int i = 0; i &lt; v.size(); ++i) {
+            v[i] += pb[0][i];
+        }
+    }
+ 
+//    return check_stupid(a, b, 0);
+    return -1;
+}
+
+int main() {
+    int n;
+    while (cin &gt;&gt; n) {
+        BEGIN = clock();
+        vi a(n), b(n);
+        for (int i = 0; i &lt; n; ++i) {
+            scanf(&quot;%d%d&quot;, &amp;a[i], &amp;b[i]);
+        }
+        int res = solve(a, b);
+        cout &lt;&lt; res &lt;&lt; endl;
+//        int res1 = stupid_solve(a, b);
+//        cout &lt;&lt; res1 &lt;&lt; endl;
+/*        if (res != res1) {
+            cerr &lt;&lt; res1 &lt;&lt; endl;
+            out(a); out(b);
+            assert(0);
+        }*/
+    }
+    return 0;
+}</pre>
+    </div>
+
+
+    <script type="text/javascript">
+        $(function () {
+            String.prototype.replaceAll = function (search, replace) {
+                return this.split(search).join(replace);
+            };
+
+            $(".prettyprint.program-source").each(function() {
+                var preId = "program-source-text";
+                var cpyId = ("id" + Math.random()).replaceAll(".", "0");
+
+                var $copy = $("<div title='Copy' data-clipboard-target='#" + preId + "' id='" + cpyId + "' class='source-copier'>Copy</div>");
+                $(this).parent().find(".caption").append($copy);
+
+                var clipboard = new Clipboard('#' + cpyId, {
+                    text: function(trigger) {
+                        return document.querySelector('#' + preId).innerText;
+                    }
+                });
+
+                clipboard.on('success', function(e) {
+                    Codeforces.showMessage("The source code has been copied into the clipboard");
+                    e.clearSelection();
+                });
+            });
+        });
+    </script>
+
+
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">1
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>2
+2 2
+4 1
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>4
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>4
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;4&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">2
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 15 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>2
+2 2
+3 3
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;-1&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">3
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>3
+1 4
+2 5
+4 2
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;-1&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">4
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>2
+1 4
+2 6
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;-1&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">5
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 15 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>2
+1 6
+2 6
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;-1&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">6
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 15 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>2
+1 6
+1 12
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>1
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>1
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;1&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">7
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 15 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>3
+1 2
+2 2
+1 2
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>2
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>2
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;2&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">8
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 15 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>2
+1 6
+3 12
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>36
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>36
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;36&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">9
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>2
+1 6
+9 12
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>1296
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>1296
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;1296&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">10
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 4 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>2
+3 12
+16 6
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>746496
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>746496
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;746496&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">11
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>2
+4 1
+2 4
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;-1&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">12
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 15 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>2
+2 24
+27 48
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>659879000
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>659879000
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;659879000&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">13
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 15 ms, <strong>memory</strong>: 8 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>1
+1 1
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>1
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>1
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;1&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">14
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>1
+1 3148137
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>1
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>1
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;1&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">15
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 4 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>1
+312441 1
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>312441
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>312441
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;312441&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">16
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 4 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>1
+1214431 9043141
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>1214431
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>1214431
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;1214431&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">17
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 15 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>3
+579 4123
+579 4123
+579 4123
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>579
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>579
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;579&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">18
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>3
+579 4123
+579 43543
+579 2138494
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>579
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>579
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;579&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">19
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>3
+21 42
+3 7
+7 3
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>21
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>21
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;21&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">20
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>14
+1 2
+2 4
+8 16
+128 256
+32768 65536
+4 8
+256 512
+16 32
+64 128
+1024 2048
+4096 8192
+65536 131072
+262144 524288
+4194304 8388608
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>846526526
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>846526526
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;846526526&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">21
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>10
+1 3
+3 9
+27 81
+2187 6561
+9 27
+6561 19683
+81 243
+729 2187
+59049 177147
+531441 1594323
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>798227420
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>798227420
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;798227420&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">22
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 15 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>9
+1 4
+4 16
+64 256
+16384 65536
+16 64
+65536 262144
+256 1024
+4096 16384
+1048576 4194304
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>688327409
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>688327409
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;688327409&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">23
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>8
+1 5
+5 25
+125 625
+78125 390625
+25 125
+390625 1953125
+625 3125
+15625 78125
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>606616797
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>606616797
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;606616797&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">24
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 15 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>7
+1 6
+6 36
+216 1296
+279936 1679616
+36 216
+1296 7776
+46656 279936
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>719781883
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>719781883
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;719781883&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">25
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>7
+1 7
+7 49
+343 2401
+823543 5764801
+49 343
+2401 16807
+117649 823543
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>279800917
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>279800917
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;279800917&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">26
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>6
+1 8
+8 64
+512 4096
+64 512
+4096 32768
+262144 2097152
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>464664614
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>464664614
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;464664614&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">27
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 4 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>6
+1 9
+9 81
+729 6561
+81 729
+6561 59049
+531441 4782969
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>776679181
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>776679181
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;776679181&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">28
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>6
+1 10
+10 100
+1000 10000
+100 1000
+10000 100000
+1000000 10000000
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>342341157
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>342341157
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;342341157&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">29
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 15 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>89
+1 2
+2 2
+4 2
+8 2
+16 2
+32 2
+64 2
+128 2
+256 2
+512 2
+1024 2
+2048 2
+4096 2
+8192 2
+16384 2
+32768 2
+65536 2
+131072 2
+262144 2
+524288 2
+1048576 2
+2097152 2
+4194304 2
+8388608 2
+16777216 2
+33554432 2
+67108864 2
+134217728 2
+268435456 2
+536870912 2
+2 4
+8 4
+32 4
+128 4
+512 4
+2048 4
+8192 4
+32768 4
+131072 4
+524288 4
+2097152 4
+8388608 4
+33554432 4
+134217728 4
+536870912 4
+8 16
+128 16
+2048 16
+32768 16
+524288 16
+8388608 16
+134217728 16
+128 256
+32768 256
+8388608 256
+32...</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>705275005
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>705275005
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;705275005&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">30
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>51
+1 3
+3 3
+9 3
+27 3
+81 3
+243 3
+729 3
+2187 3
+6561 3
+19683 3
+59049 3
+177147 3
+531441 3
+1594323 3
+4782969 3
+14348907 3
+43046721 3
+129140163 3
+387420489 3
+3 9
+27 9
+243 9
+2187 9
+19683 9
+177147 9
+1594323 9
+14348907 9
+129140163 9
+27 81
+2187 81
+177147 81
+14348907 81
+2187 6561
+14348907 6561
+14348907 43046721
+9 27
+243 27
+6561 27
+177147 27
+4782969 27
+129140163 27
+6561 19683
+129140163 19683
+81 243
+19683 243
+4782969 243
+729 2187
+1594323 2187
+59049 177147
+531441 1594323...</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>943009050
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>943009050
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;943009050&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">31
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 15 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>39
+1 4
+4 4
+16 4
+64 4
+256 4
+1024 4
+4096 4
+16384 4
+65536 4
+262144 4
+1048576 4
+4194304 4
+16777216 4
+67108864 4
+268435456 4
+4 16
+64 16
+1024 16
+16384 16
+262144 16
+4194304 16
+67108864 16
+64 256
+16384 256
+4194304 256
+16384 65536
+16 64
+1024 64
+65536 64
+4194304 64
+268435456 64
+65536 262144
+256 1024
+262144 1024
+268435456 1024
+4096 16384
+67108864 16384
+1048576 4194304
+16777216 67108864
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>483961502
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>483961502
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;483961502&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">32
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 4 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>32
+1 5
+5 5
+25 5
+125 5
+625 5
+3125 5
+15625 5
+78125 5
+390625 5
+1953125 5
+9765625 5
+48828125 5
+244140625 5
+5 25
+125 25
+3125 25
+78125 25
+1953125 25
+48828125 25
+125 625
+78125 625
+48828125 625
+78125 390625
+25 125
+3125 125
+390625 125
+48828125 125
+390625 1953125
+625 3125
+1953125 3125
+15625 78125
+9765625 48828125
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>422925678
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>422925678
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;422925678&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">33
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 15 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>31
+1 6
+6 6
+36 6
+216 6
+1296 6
+7776 6
+46656 6
+279936 6
+1679616 6
+10077696 6
+60466176 6
+362797056 6
+6 36
+216 36
+7776 36
+279936 36
+10077696 36
+362797056 36
+216 1296
+279936 1296
+362797056 1296
+279936 1679616
+36 216
+7776 216
+1679616 216
+362797056 216
+1679616 10077696
+1296 7776
+10077696 7776
+46656 279936
+60466176 362797056
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>984905470
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>984905470
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;984905470&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">34
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 4 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>26
+1 7
+7 7
+49 7
+343 7
+2401 7
+16807 7
+117649 7
+823543 7
+5764801 7
+40353607 7
+282475249 7
+7 49
+343 49
+16807 49
+823543 49
+40353607 49
+343 2401
+823543 2401
+823543 5764801
+49 343
+16807 343
+5764801 343
+5764801 40353607
+2401 16807
+40353607 16807
+117649 823543
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>136839922
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>136839922
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;136839922&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">35
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>25
+1 8
+8 8
+64 8
+512 8
+4096 8
+32768 8
+262144 8
+2097152 8
+16777216 8
+134217728 8
+8 64
+512 64
+32768 64
+2097152 64
+134217728 64
+512 4096
+2097152 4096
+2097152 16777216
+64 512
+32768 512
+16777216 512
+16777216 134217728
+4096 32768
+134217728 32768
+262144 2097152
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>877081770
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>877081770
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;877081770&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">36
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>25
+1 9
+9 9
+81 9
+729 9
+6561 9
+59049 9
+531441 9
+4782969 9
+43046721 9
+387420489 9
+9 81
+729 81
+59049 81
+4782969 81
+387420489 81
+729 6561
+4782969 6561
+4782969 43046721
+81 729
+59049 729
+43046721 729
+43046721 387420489
+6561 59049
+387420489 59049
+531441 4782969
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>931384348
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>931384348
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;931384348&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">37
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 15 ms, <strong>memory</strong>: 4 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>25
+1 10
+10 10
+100 10
+1000 10
+10000 10
+100000 10
+1000000 10
+10000000 10
+100000000 10
+1000000000 10
+10 100
+1000 100
+100000 100
+10000000 100
+1000000000 100
+1000 10000
+10000000 10000
+10000000 100000000
+100 1000
+100000 1000
+100000000 1000
+100000000 1000000000
+10000 100000
+1000000000 100000
+1000000 10000000
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>936617851
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>936617851
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;936617851&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">38
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>17
+1 2
+1 4
+4 16
+64 256
+16384 65536
+1 8
+64 512
+16777216 134217728
+16 32
+16777216 33554432
+16 128
+2048 2048
+8192 8192
+4096 131072
+8192 524288
+256 8388608
+2097152 536870912
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>659662497
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>659662497
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;659662497&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">39
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>17
+1 2
+2 4
+8 16
+128 256
+32768 65536
+4 8
+256 512
+67108864 134217728
+4 32
+4194304 33554432
+2 128
+8 2048
+2 8192
+2048 131072
+32 524288
+8192 8388608
+67108864 536870912
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>929168961
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>929168961
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;929168961&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">40
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 15 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>17
+1 2
+2 4
+8 16
+128 256
+32768 65536
+2 8
+128 512
+33554432 134217728
+2 32
+2097152 33554432
+128 128
+1024 2048
+1024 8192
+2 131072
+16384 524288
+524288 8388608
+8 536870912
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>839825639
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>839825639
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;839825639&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">41
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>17
+1 2
+2 4
+8 16
+128 256
+32768 65536
+2 8
+128 512
+33554432 134217728
+16 32
+16777216 33554432
+8 128
+128 2048
+512 8192
+256 131072
+64 524288
+1048576 8388608
+512 536870912
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>452786803
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>452786803
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;452786803&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">42
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 15 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>17
+1 2
+1 4
+4 16
+64 256
+16384 65536
+2 8
+128 512
+33554432 134217728
+4 32
+4194304 33554432
+16 128
+1024 2048
+2048 8192
+8 131072
+16384 524288
+2097152 8388608
+1 536870912
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>25658080
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>25658080
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;25658080&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">43
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 15 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>69
+1 2
+2 2
+4 2
+8 2
+16 2
+32 2
+64 2
+128 2
+256 2
+512 2
+1024 2
+2048 2
+4096 2
+8192 2
+16384 2
+32768 2
+65536 2
+131072 2
+262144 2
+524288 2
+1048576 2
+2097152 2
+4194304 2
+8388608 2
+1 4
+4 4
+16 4
+64 4
+256 4
+1024 4
+4096 4
+16384 4
+65536 4
+262144 4
+1048576 4
+4194304 4
+4 16
+64 16
+1024 16
+16384 16
+262144 16
+4194304 16
+64 256
+16384 256
+4194304 256
+16384 65536
+1 8
+8 8
+64 8
+512 8
+4096 8
+32768 8
+262144 8
+2097152 8
+64 512
+32768 512
+16 32
+512 32
+16384 32
+524288 32
+16 1...</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>758844919
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>758844919
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;758844919&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">44
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>72
+1 2
+2 2
+4 2
+8 2
+16 2
+32 2
+64 2
+128 2
+256 2
+512 2
+1024 2
+2048 2
+4096 2
+8192 2
+16384 2
+32768 2
+65536 2
+131072 2
+262144 2
+524288 2
+1048576 2
+2097152 2
+4194304 2
+8388608 2
+2 4
+8 4
+32 4
+128 4
+512 4
+2048 4
+8192 4
+32768 4
+131072 4
+524288 4
+2097152 4
+8388608 4
+8 16
+128 16
+2048 16
+32768 16
+524288 16
+8388608 16
+128 256
+32768 256
+8388608 256
+32768 65536
+4 8
+32 8
+256 8
+2048 8
+16384 8
+131072 8
+1048576 8
+8388608 8
+256 512
+131072 512
+4 32
+128 32
+4096 32
+13107...</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>149744260
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>149744260
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;149744260&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">45
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 15 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>72
+1 2
+2 2
+4 2
+8 2
+16 2
+32 2
+64 2
+128 2
+256 2
+512 2
+1024 2
+2048 2
+4096 2
+8192 2
+16384 2
+32768 2
+65536 2
+131072 2
+262144 2
+524288 2
+1048576 2
+2097152 2
+4194304 2
+8388608 2
+2 4
+8 4
+32 4
+128 4
+512 4
+2048 4
+8192 4
+32768 4
+131072 4
+524288 4
+2097152 4
+8388608 4
+8 16
+128 16
+2048 16
+32768 16
+524288 16
+8388608 16
+128 256
+32768 256
+8388608 256
+32768 65536
+2 8
+16 8
+128 8
+1024 8
+8192 8
+65536 8
+524288 8
+4194304 8
+128 512
+65536 512
+2 32
+64 32
+2048 32
+65536 32
+...</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>235978744
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>235978744
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;235978744&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">46
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 15 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>70
+1 2
+2 2
+4 2
+8 2
+16 2
+32 2
+64 2
+128 2
+256 2
+512 2
+1024 2
+2048 2
+4096 2
+8192 2
+16384 2
+32768 2
+65536 2
+131072 2
+262144 2
+524288 2
+1048576 2
+2097152 2
+4194304 2
+8388608 2
+2 4
+8 4
+32 4
+128 4
+512 4
+2048 4
+8192 4
+32768 4
+131072 4
+524288 4
+2097152 4
+8388608 4
+8 16
+128 16
+2048 16
+32768 16
+524288 16
+8388608 16
+128 256
+32768 256
+8388608 256
+32768 65536
+2 8
+16 8
+128 8
+1024 8
+8192 8
+65536 8
+524288 8
+4194304 8
+128 512
+65536 512
+16 32
+512 32
+16384 32
+524288 ...</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>798641512
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>798641512
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;798641512&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">47
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 15 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>71
+1 2
+2 2
+4 2
+8 2
+16 2
+32 2
+64 2
+128 2
+256 2
+512 2
+1024 2
+2048 2
+4096 2
+8192 2
+16384 2
+32768 2
+65536 2
+131072 2
+262144 2
+524288 2
+1048576 2
+2097152 2
+4194304 2
+8388608 2
+1 4
+4 4
+16 4
+64 4
+256 4
+1024 4
+4096 4
+16384 4
+65536 4
+262144 4
+1048576 4
+4194304 4
+4 16
+64 16
+1024 16
+16384 16
+262144 16
+4194304 16
+64 256
+16384 256
+4194304 256
+16384 65536
+2 8
+16 8
+128 8
+1024 8
+8192 8
+65536 8
+524288 8
+4194304 8
+128 512
+65536 512
+4 32
+128 32
+4096 32
+131072 32
+41...</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>423109367
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>423109367
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;423109367&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">48
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>72
+1 2
+2 2
+4 2
+8 2
+16 2
+32 2
+64 2
+128 2
+256 2
+512 2
+1024 2
+2048 2
+4096 2
+8192 2
+16384 2
+32768 2
+65536 2
+131072 2
+262144 2
+524288 2
+1048576 2
+2097152 2
+4194304 2
+8388608 2
+2 4
+8 4
+32 4
+128 4
+512 4
+2048 4
+8192 4
+32768 4
+131072 4
+524288 4
+2097152 4
+8388608 4
+8 16
+128 16
+2048 16
+32768 16
+524288 16
+8388608 16
+128 256
+32768 256
+8388608 256
+32768 65536
+2 8
+16 8
+128 8
+1024 8
+8192 8
+65536 8
+524288 8
+4194304 8
+128 512
+65536 512
+8 32
+256 32
+8192 32
+262144 32...</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>488655268
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>488655268
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;488655268&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">49
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>70
+1 2
+2 2
+4 2
+8 2
+16 2
+32 2
+64 2
+128 2
+256 2
+512 2
+1024 2
+2048 2
+4096 2
+8192 2
+16384 2
+32768 2
+65536 2
+131072 2
+262144 2
+524288 2
+1048576 2
+2097152 2
+4194304 2
+8388608 2
+4 4
+16 4
+64 4
+256 4
+1024 4
+4096 4
+16384 4
+65536 4
+262144 4
+1048576 4
+4194304 4
+16 16
+256 16
+4096 16
+65536 16
+1048576 16
+256 256
+65536 256
+65536 65536
+1 8
+8 8
+64 8
+512 8
+4096 8
+32768 8
+262144 8
+2097152 8
+64 512
+32768 512
+2 32
+64 32
+2048 32
+65536 32
+2097152 32
+16 128
+2048 128
+2621...</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>823120
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>823120
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;823120&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">50
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 15 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>73
+1 2
+2 2
+4 2
+8 2
+16 2
+32 2
+64 2
+128 2
+256 2
+512 2
+1024 2
+2048 2
+4096 2
+8192 2
+16384 2
+32768 2
+65536 2
+131072 2
+262144 2
+524288 2
+1048576 2
+2097152 2
+4194304 2
+8388608 2
+1 4
+4 4
+16 4
+64 4
+256 4
+1024 4
+4096 4
+16384 4
+65536 4
+262144 4
+1048576 4
+4194304 4
+4 16
+64 16
+1024 16
+16384 16
+262144 16
+4194304 16
+64 256
+16384 256
+4194304 256
+16384 65536
+1 8
+8 8
+64 8
+512 8
+4096 8
+32768 8
+262144 8
+2097152 8
+64 512
+32768 512
+2 32
+64 32
+2048 32
+65536 32
+2097152 ...</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>598648018
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>598648018
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;598648018&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">51
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>67
+1 2
+2 2
+4 2
+8 2
+16 2
+32 2
+64 2
+128 2
+256 2
+512 2
+1024 2
+2048 2
+4096 2
+8192 2
+16384 2
+32768 2
+65536 2
+131072 2
+262144 2
+524288 2
+1048576 2
+2097152 2
+4194304 2
+8388608 2
+4 4
+16 4
+64 4
+256 4
+1024 4
+4096 4
+16384 4
+65536 4
+262144 4
+1048576 4
+4194304 4
+16 16
+256 16
+4096 16
+65536 16
+1048576 16
+256 256
+65536 256
+65536 65536
+1 8
+8 8
+64 8
+512 8
+4096 8
+32768 8
+262144 8
+2097152 8
+64 512
+32768 512
+16 32
+512 32
+16384 32
+524288 32
+1 128
+128 128
+16384 128
+209...</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>915306548
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>915306548
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;915306548&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">52
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 15 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>72
+1 2
+2 2
+4 2
+8 2
+16 2
+32 2
+64 2
+128 2
+256 2
+512 2
+1024 2
+2048 2
+4096 2
+8192 2
+16384 2
+32768 2
+65536 2
+131072 2
+262144 2
+524288 2
+1048576 2
+2097152 2
+4194304 2
+8388608 2
+2 4
+8 4
+32 4
+128 4
+512 4
+2048 4
+8192 4
+32768 4
+131072 4
+524288 4
+2097152 4
+8388608 4
+8 16
+128 16
+2048 16
+32768 16
+524288 16
+8388608 16
+128 256
+32768 256
+8388608 256
+32768 65536
+4 8
+32 8
+256 8
+2048 8
+16384 8
+131072 8
+1048576 8
+8388608 8
+256 512
+131072 512
+4 32
+128 32
+4096 32
+13107...</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>523988476
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>523988476
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;523988476&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">53
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 15 ms, <strong>memory</strong>: 8 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>100
+888381664 866366630
+170399907 404233949
+78323264 13859398
+329783033 300756236
+641956407 292961703
+663764697 468526892
+926324821 978642844
+705028140 407820996
+127865903 61508676
+235416543 694503283
+510446885 691365632
+663503432 465982169
+367120984 432078990
+815188736 990928380
+396569207 793851387
+800986631 287487006
+161372831 816909250
+955588629 271434483
+421819993 913058940
+295975590 369637795
+456988261 359471245
+76397417 488992463
+269125559 233662718
+156342995 616791614
+990536...</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;-1&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">54
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 15 ms, <strong>memory</strong>: 12 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>100
+337369924 278848730
+654933675 866361693
+732544605 890800310
+350303294 741112817
+421151650 122487804
+904538495 437642740
+513415079 500165727
+625284374 796564559
+897879625 685598955
+919240045 53983862
+23409637 617733148
+519712611 817313362
+437904046 167549084
+817086586 27923430
+66397712 296558898
+435187058 982968188
+895654248 65129001
+683183432 877113239
+337233209 563860176
+507872609 338775886
+131002031 591916747
+582302556 636335202
+310914804 315157731
+153287907 324188133
+4947805...</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;-1&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">55
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 15 ms, <strong>memory</strong>: 8 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>100
+556840201 669601415
+674042771 93322040
+157280418 253115131
+933556803 294280580
+169051325 891788029
+392824588 250740100
+350731312 20845312
+44914068 83795023
+593374908 919476570
+540504613 98299310
+248877572 260962787
+350339437 555593781
+178426931 390809772
+142754569 256130687
+456207169 599829462
+791244294 412201040
+18099650 188175280
+735842319 579779971
+319944968 69600327
+409684034 676765802
+204253563 727362702
+728247436 355048331
+831741424 261141025
+581324278 846358069
+503594782...</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;-1&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">56
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 8 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>100
+473347111 640932948
+320036306 595696211
+365475226 347859328
+553364017 687935743
+145411543 689180757
+696504973 783694820
+346712714 491464141
+923286551 623019119
+78429679 584120319
+458201960 964026246
+493163000 871093871
+58713893 607417660
+196343259 170321968
+814773581 47323294
+897417442 172901429
+595787636 784729394
+930147694 711408705
+679137961 579115947
+174768023 122188829
+765164556 396481185
+920908818 172881317
+24776848 922796983
+722389976 674757468
+642636671 769228788
+591677...</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;-1&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">57
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 15 ms, <strong>memory</strong>: 8 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>100
+808147225 623333304
+535665685 469385259
+122918604 200681823
+800211367 286974812
+85215517 983921829
+274028967 567054904
+144473212 964018990
+177471567 73882806
+810182308 202537497
+726016143 149305463
+272474979 746597783
+777761077 450394346
+917576377 27276733
+804562128 72467093
+178416980 531161761
+846565172 782940030
+402715358 214313598
+487790034 70300515
+749564081 627024318
+89471731 518708720
+870244879 137456740
+245080882 213625870
+633296623 498208907
+589986179 437666729
+11179909...</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;-1&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">58
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 8 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>100
+5598720 480
+10800 145800
+839808000 1440
+145800 2332800
+162000 10368000
+69120 16796160
+1049760 32400
+810 1800
+1640250 432000
+72000 116640
+77760 7776000
+5598720 131220
+1166400 777600
+2624400 20250
+2430 874800
+11664000 172800
+57600 19440
+3110400 2187000
+291600 16796160
+27000 87480
+26244000 25920
+3280500 33592320
+43740 8748000
+167961600 138240
+11520 162000
+218700 216000
+182250 120
+36000 19440
+58320 81000
+26244000 750
+162000 10497600
+656100 720
+104976000 4199040
+207360 7680...</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;-1&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">59
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 8 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>100
+10800 46656000
+291600 656100
+388800 209952000
+15360 3888000
+36000 30
+26244000 182250
+97200 3600
+233280 720
+546750 33592320
+2624400 864000
+144000 1049760
+450 27000
+109350 466560
+18662400 48600
+2160 207360
+2073600 76800
+2099520 3732480
+8100 25920
+1620 1049760
+311040 1350
+5760 120
+90 28800
+207360 24000
+691200 162000
+87480 5248800
+8748000 64800
+1312200 41990400
+699840 432000
+2099520 1036800
+7776000 1049760
+1500 1399680
+48000 4860
+6750 6220800
+419904000 52488000
+324000 524...</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;-1&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">60
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 8 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>100
+5832000 90
+138240 207360
+240 60750
+960 5400
+1620 16200
+103680 72900
+1200 144000
+864000 243000
+216000 182250
+3600 21870
+1312200 6998400
+5760 4199040
+777600 90
+1312200 14400
+12000 4050
+36450 240
+900 3499200
+103680 524880
+14400 349920
+419904000 388800
+279936000 23040
+874800 4050
+104976000 324000
+180 4500
+16200 46656000
+27993600 139968000
+8640 4800
+15552000 1312200
+1640250 546750
+8100 13500
+19440 4320
+8398080 1728000
+46080 1728000
+48000 16200
+2592000 51840
+108000 172800...</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;-1&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">61
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>100
+116640 43200
+233280 11664000
+162000 9600
+5248800 38400
+4500 65610
+17496000 4665600
+1500 524880
+1640250 11664000
+24000 8748000
+2332800 33592320
+24300 583200
+145800 72900
+1500 2099520
+2592000 311040
+1244160 38400
+167961600 1944000
+364500 51840
+23328000 364500
+24000 328050
+15552000 240
+2332800 145800
+87480 518400
+1458000 23040
+1749600 27000
+900 48000
+116640 1800
+18000 172800
+15552000 622080
+46656000 5184000
+60750 480
+57600 9720
+46656000 16200
+12150 5184000
+155520 3499200...</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;-1&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">62
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 16 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>100
+3110400 480
+69120 691200
+131220 21870
+11520 13996800
+384000 450
+27993600 3240
+933120 699840
+1800 194400
+540 8100
+131220 2624400
+13996800 34560
+25920 839808000
+46080 720
+155520 58320
+7776000 18000
+55987200 8748000
+34560 900
+288000 259200
+5400 1440
+1312200 279936000
+14580 8748000
+18662400 12960
+2099520 1555200
+546750 116640
+162000 131220
+1800 162000
+57600 414720
+86400 83980800
+1920 8748000
+90 4800
+48600 16796160
+87480 19440
+2073600 4665600
+8748000 12960
+65610 4374000
+5...</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;-1&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">63
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>2
+387420489 774840978
+26244 3
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>73787378
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>73787378
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;73787378&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">64
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 15 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>2
+387420489 774840978
+8748 3
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>73787378
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>73787378
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;73787378&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">65
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>2
+387420489 774840978
+2125764 3
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>73787378
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>73787378
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;73787378&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">66
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>2
+387420489 774840978
+26244 3
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>73787378
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>73787378
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;73787378&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">67
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>2
+387420489 774840978
+972 3
+</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>73787378
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>73787378
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;73787378&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">68
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 4 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>100
+33554432 33554432
+32 4096
+8 2
+1024 512
+262144 512
+524288 16384
+67108864 268435456
+1048576 4096
+16 4
+128 1048576
+32768 1048576
+524288 16384
+2048 8192
+8388608 268435456
+4096 8388608
+8388608 512
+32 8388608
+134217728 256
+4096 67108864
+512 2048
+8192 2048
+8 16384
+256 128
+32 262144
+8 134217728
+33554432 524288
+1024 16777216
+131072 64
+268435456 16384
+1048576 16
+65536 262144
+16 2097152
+131072 1048576
+33554432 8388608
+512 64
+33554432 8
+131072 1048576
+4096 524288
+131072 32768...</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;-1&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">69
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>100
+1024 256
+524288 33554432
+2097152 33554432
+1024 2097152
+4096 16
+67108864 8192
+32768 32768
+262144 8388608
+67108864 1048576
+67108864 4
+2 262144
+32768 8388608
+8192 32
+8388608 2
+4 512
+8192 268435456
+67108864 4
+1048576 33554432
+1024 65536
+32768 1024
+16 131072
+131072 262144
+512 512
+32 1024
+4 16777216
+16777216 134217728
+134217728 64
+4096 33554432
+262144 4194304
+256 1048576
+1048576 128
+67108864 8192
+134217728 16
+8 32
+1024 64
+256 67108864
+8 8388608
+8192 524288
+262144 4
+671...</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;-1&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">70
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 15 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>100
+65536 524288
+524288 8
+32 256
+134217728 512
+32 33554432
+2048 256
+1024 2
+4 8
+131072 67108864
+65536 8
+128 256
+1024 65536
+32 2048
+16 256
+8192 131072
+8388608 4096
+2 64
+2097152 131072
+512 4
+4096 524288
+64 2097152
+2097152 1024
+16777216 256
+131072 16777216
+32768 2048
+67108864 2
+2097152 8388608
+512 32
+524288 8
+4194304 256
+256 268435456
+262144 262144
+4194304 1024
+1048576 128
+128 131072
+67108864 32
+262144 32768
+1024 2
+128 256
+256 134217728
+32768 65536
+128 32768
+16384 4
+...</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;-1&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">71
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 0 ms, <strong>memory</strong>: 0 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>100
+16384 262144
+512 131072
+2048 1024
+65536 1048576
+32 1048576
+1048576 4194304
+1024 16384
+67108864 262144
+8 131072
+8192 134217728
+16384 33554432
+4 262144
+64 32
+8388608 4
+67108864 32
+131072 4194304
+134217728 1048576
+1048576 131072
+32 16
+4194304 4096
+67108864 32
+2 67108864
+2097152 524288
+262144 4194304
+131072 2
+33554432 8192
+16777216 268435456
+524288 1048576
+262144 268435456
+268435456 256
+32 32768
+2048 16384
+2097152 524288
+128 2097152
+1024 64
+524288 65536
+64 4
+2097152 13...</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;-1&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+    <div class="roundbox " style="margin-top:2em;font-size:0.8em;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">72
+            <div class="top-links">
+            </div>
+        </div>
+    <div class="infoline"><strong>Time</strong>: 15 ms, <strong>memory</strong>: 4 KB</div>
+<div class="infoline">
+<div class="welldone" >Verdict: OK</div>
+</div>
+
+<div class="file input-view">
+    <div class="name">Input</div>
+    <div class="text"><pre>100
+8388608 262144
+32768 16384
+16 64
+8388608 512
+8 268435456
+256 65536
+32 134217728
+32 8
+8388608 64
+2097152 32
+256 2097152
+4194304 8192
+67108864 2
+8388608 8
+32 32768
+16777216 4194304
+4096 128
+16384 4
+2097152 262144
+8 32768
+33554432 16
+128 64
+262144 16384
+131072 8192
+16 2048
+512 16
+16384 65536
+32 268435456
+4 512
+268435456 8192
+1048576 8388608
+4096 2097152
+512 16
+32768 4096
+2 134217728
+67108864 134217728
+268435456 128
+16 1024
+128 32
+262144 32768
+1024 1024
+2097152 256...</pre></div>
+</div>
+
+<div class="file output-view">
+    <div class="name">Participant's output</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file answer-view">
+    <div class="name">Jury's answer</div>
+    <div class="text"><pre>-1
+</pre></div>
+</div>
+
+<div class="file checker-comment-view">
+    <div class="name">Checker comment</div>
+    <div class="text"><pre>ok 1 number(s): &quot;-1&quot;
+</pre></div>
+</div>
+
+
+    </div>
+
+
+
+<div class="submissions-diff-popup"  style="display:none;width:900px;height:500px;overflow:auto;padding:1em;margin:1em;font-size:1.2rem;">
+
+<div>
+    <form class="getDiffForm" method="post" action="#"><input type='hidden' name='csrf_token' value='eda38c331f19b95f5a7fa1898f8cdfaf'/>
+        <table>
+            <tbody>
+            <tr>
+                <td style="padding-right: 1em !important;">
+                    <label for="previousSubmissionId">Previous Submission:</label>
+                    <input type="text" name="previousSubmissionId" value=""/>
+         <div class="shiftUp error__previousSubmissionId">
+             <span class="error for__previousSubmissionId " style="display: none;">&nbsp;</span>
+             <span class="notice for__previousSubmissionId ">&nbsp;</span>
+         </div>
+                </td>
+                <td style="padding-right: 1em !important;">
+                    <label for="previousSubmissionId">Current Submission:</label>
+                    <input type="text" name="currentSubmissionId" value="12873480"/>
+         <div class="shiftUp error__currentSubmissionId">
+             <span class="error for__currentSubmissionId " style="display: none;">&nbsp;</span>
+             <span class="notice for__currentSubmissionId ">&nbsp;</span>
+         </div>
+                </td>
+                <td>
+                    <input type="submit" value="Compare"/>
+                    <img class="waitingIndicator" style="display: none" src="//sta.codeforces.com/s/60739/images/indicator.gif" alt="waiting...">
+         <div class="shiftUp error__diffFormSubmit">
+             <span class="error for__diffFormSubmit " style="display: none;">&nbsp;</span>
+             <span class="notice for__diffFormSubmit ">&nbsp;</span>
+         </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+    <div class="diffHtmlTarget"></div>
+</div>
+<script type="text/javascript">
+    Codeforces.getDiffFormSubmitListener = function (event) {
+        Codeforces.clearAjaxFormErrors();
+        var waitingIndicator = $(this).find(".waitingIndicator");
+        waitingIndicator.show();
+
+        var previousSubmissionId = $(this).find("input[name='previousSubmissionId']").val();
+        var currentSubmissionId = $(this).find("input[name='currentSubmissionId']").val();
+        var targetDiv = $(this).next();
+        $.post("/data/submissionsDiff",
+            {action: "getDiff", previousSubmissionId: previousSubmissionId, currentSubmissionId: currentSubmissionId},
+            function (response) {
+                waitingIndicator.hide();
+                targetDiv.html("");
+
+                if (response["success"] == "true") {
+                    targetDiv.html("<pre class=\"prettyprint\">" + response["diffHtml"] + "</pre>");
+                    prettyPrint();
+                } else {
+                    Codeforces.setAjaxFormErrors(".getDiffForm", response);
+                }
+            },
+            "json"
+        );
+        return false;
+    };
+</script></div>
+
+<div class="add-submission-to-problem-solutions-box" style="display: none; width: 500px">
+    <form method="POST"><input type='hidden' name='csrf_token' value='eda38c331f19b95f5a7fa1898f8cdfaf'/>
+        <h5>Add solution to problem</h5>
+        <hr/>
+        <table class="table-form">
+            <body>
+                <tr>
+                    <td class="field-name">Filename:</td>
+                    <td><input style="width: 300px;box-sizing: border-box;" class="filename-field" type="text" value="geometric-progression_Kostroma.cpp"/></td>
+                </tr>
+                <tr>
+                    <td class="field-name">Solution tag:</td>
+                    <td>
+                        <select class="solutionTag-field" style="width: 300px">
+                                <option value="ACCEPTED">Correct</option>
+                                <option value="REJECTED">Incorrect</option>
+                                <option value="TIME_LIMIT_EXCEEDED">Time limit exceeded</option>
+                                <option value="WRONG_ANSWER">Wrong answer</option>
+                                <option value="PRESENTATION_ERROR">Presentation error</option>
+                                <option value="MEMORY_LIMIT_EXCEEDED">Memory limit exceeded</option>
+                                <option value="FAILED">Failed</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="submit" class="submit" value="Add"/>
+                    </td>
+                </tr>
+            </body>
+        </table>
+    </form>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $("button.showDiff").click(function () {
+            Codeforces.facebox(".submissions-diff-popup", "//sta.codeforces.com/s/60739");
+            var getDiffForms = $(".getDiffForm");
+            getDiffForms.submit(Codeforces.getDiffFormSubmitListener);
+        });
+
+        $("button.challengeButton").click(function () {
+            Codeforces.redirect($(this).attr("data-href"));
+        });
+
+        $("form.add-submission-to-problem-solutions").submit(function () {
+            var a = $(this);
+            Codeforces.facebox(".add-submission-to-problem-solutions-box", "//sta.codeforces.com/s/60739");
+            $(".add-submission-to-problem-solutions-box form").submit(function() {
+                var filenameField = $(this).find(".filename-field");
+                var filename = filenameField.val();
+                var solutionTag = $(this).find(".solutionTag-field").val();
+                $.post("/data/submissionAddToProblemSolutions", {
+                        action: "addToProblemSolutions", submissionId: 12873480, filename: filename, solutionTag: solutionTag}, function(json) {
+                    if (json.success == "true") {
+                        window.alert("The solution has been added!");
+                        Codeforces.reload();
+                    } else {
+                        window.alert("Can't add solution: " + json.error);
+                    }
+                }, "json");
+                return false;
+            });
+            return false;
+        });
+    });
+</script>                </div>
+        </div>
+            <br style="clear: both;"/>
+            <div id="footer">
+                <div><a href="http://codeforces.com/">Codeforces</a> (c) Copyright 2010-2019 Mike Mirzayanov</div>
+                <div>The only programming contests Web 2.0 platform</div>
+                    <div>Server time: <span class="format-timewithseconds" data-locale="en">Jul/24/2019 06:50:26</span> (e1).</div>
+                    <div>Desktop version, switch to <a rel="nofollow" class="switchToMobile" href="?mobile=true">mobile version</a>.</div>
+                <div class="smaller"><a href="/privacy">Privacy Policy</a></div>
+
+                    <div style="margin-top: 25px;">
+                        Supported by
+                    </div>
+                    <div style="margin-top: 8px; padding-bottom: 20px; position: relative; left: 10px;">
+                        <a href="https://telegram.org/"><img style="margin-right: 2em; width: 60px;" src="//sta.codeforces.com/s/60739/images/telegram-100x100.png" alt="Telegram" title="Telegram"/></a>
+                        <a href="http://ifmo.ru/en/"><img style="width: 120px;" src="//sta.codeforces.com/s/60739/images/itmo_small_en-logo.png" alt="ИТМО" title="ИТМО"/></a>
+                    </div>
+            </div>
+        <script type="text/javascript">
+            $(function() {
+                $(".switchToMobile").click(function() {
+                    Codeforces.redirect(Codeforces.updateUrlParameter(document.location.href, "mobile", "true"));
+                    return false;
+                });
+                $(".switchToDesktop").click(function() {
+                    Codeforces.redirect(Codeforces.updateUrlParameter(document.location.href, "mobile", "false"));
+                    return false;
+                });
+            });
+        </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if ($(window).width() < 1600) {
+                $('.button-up').css('width', '30px').css('line-height', '30px').css('font-size', '20px');
+            }
+
+            if ($(window).width() >= 1200) {
+                $ (window).scroll (function () {
+                    if ($ (this).scrollTop () > 100) {
+                        $ ('.button-up').fadeIn();
+                    } else {
+                        $ ('.button-up').fadeOut();
+                    }
+                });
+
+                $('.button-up').click(function () {
+                    $('body,html').animate({
+                        scrollTop: 0
+                    }, 500);
+                    return false;
+                });
+
+                $('.button-up').hover(function () {
+                    $(this).animate({
+                        'opacity':'1'
+                    }).css({'background-color':'#e7ebf0','color':'#6a86a4'});
+                }, function () {
+                    $(this).animate({
+                        'opacity':'0.7'
+                    }).css({'background':'none','color':'#d3dbe4'});;
+                });
+            }
+            Codeforces.focusOnError();
+        });
+    </script>
+
+        <div class="userListsFacebox" style="display:none;">
+            <div style="padding: 0.5em; width: 600px; max-height: 200px; overflow-y: auto">
+<div class="datatable"
+     
+     style="background-color: #E1E1E1; padding-bottom: 3px;">
+            <div class="lt">&nbsp;</div>
+            <div class="rt">&nbsp;</div>
+            <div class="lb">&nbsp;</div>
+            <div class="rb">&nbsp;</div>
+
+            <div style="padding: 4px 0 0 6px;font-size:1.4rem;position:relative;">
+                User lists
+
+                <div style="position:absolute;right:0.25em;top:0.35em;">
+                    <span style="padding:0;position:relative;bottom:2px;" class="rowCount"></span>
+
+                    <img class="closed" src="//sta.codeforces.com/s/60739/images/icons/control.png"/>
+
+                    <span class="filter" style="display:none;">
+                        <img class="opened" src="//sta.codeforces.com/s/60739/images/icons/control-270.png"/>
+                        <input style="padding:0;position:relative;bottom:2px;border:1px solid #aaa;height:17px;font-size:1.3rem;"/>
+                    </span>
+                </div>
+            </div>
+            <div style="background-color: white;margin:0.3em 3px 0 3px;position:relative;">
+            <div class="ilt">&nbsp;</div>
+            <div class="irt">&nbsp;</div>
+            <table class="">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+            </table>
+            </div>
+        </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+                // Create new ':containsIgnoreCase' selector for search
+                jQuery.expr[':'].containsIgnoreCase = function(a, i, m) {
+                    return jQuery(a).text().toUpperCase()
+                            .indexOf(m[3].toUpperCase()) >= 0;
+                };
+
+                if (window.updateDatatableFilter == undefined) {
+                    window.updateDatatableFilter = function(i) {
+                        var parent = $(i).parent().parent().parent().parent();
+                        $("tr.no-items", parent).remove();
+                        $("tr", parent).hide().removeClass('visible');
+                        var text = $(i).val();
+                        if (text) {
+                            $("tr" + ":containsIgnoreCase('" + text + "')", parent).show().addClass('visible');
+                        } else {
+                            parent.find(".rowCount").text("");
+                            $("tr", parent).show().addClass('visible');
+                        }
+
+                        var found = false;
+                        var visibleRowCount = 0;
+                        $("tr", parent).each(function () {
+                            if (!found) {
+                                if ($(this).find("th").size() > 0) {
+                                    $(this).show().addClass('visible');
+                                    found = true;
+                                }
+                            }
+                            if ($(this).hasClass('visible')) {
+                                visibleRowCount++;
+                            }
+                        });
+                        if (text) {
+                            parent.find(".rowCount").text("Matches: " + (visibleRowCount - (found ? 1 : 0)));
+                        }
+                        if (visibleRowCount == (found ? 1 : 0)) {
+                            $("<tr class='no-items visible'><td style=\"text-align:left;\"colspan=\"32\">No items<\/td><\/tr>").appendTo($(parent).find('table'));
+                        }
+                        $(parent).find("tr td").removeClass("dark");
+                        $(parent).find("tr.visible:odd td").addClass("dark");
+                    }
+
+                    $(".datatable .closed").click(function () {
+                        var parent = $(this).parent();
+                        $(this).hide();
+                        $(".filter", parent).fadeIn(function () {
+                            $("input", parent).val("").focus().css("border", "1px solid #aaa");
+                        });
+                    });
+
+                    $(".datatable .opened").click(function () {
+                        var parent = $(this).parent().parent();
+                        $(".filter", parent).fadeOut(function () {
+                            $(".closed", parent).show();
+                            $("input", parent).val("").each(function () {
+                                window.updateDatatableFilter(this);
+                            });
+                        });
+                    });
+
+                    $(".datatable .filter input").keyup(function(e) {
+                        window.updateDatatableFilter(this);
+                        e.preventDefault();
+                        e.stopPropagation();
+                    });
+
+                    $(".datatable table").each(function () {
+                        var found = false;
+                        $("tr", this).each(function () {
+                            if (!found && $(this).find("th").size() == 0) {
+                                found = true;
+                            }
+                        });
+                        if (!found) {
+                            $("<tr class='no-items visible'><td style=\"text-align:left;\"colspan=\"32\">No items<\/td><\/tr>").appendTo(this);
+                        }
+                    });
+
+                    // Applies styles to datatables.
+                    $(".datatable").each(function () {
+                        $(this).find("tr:first th").addClass("top");
+                        $(this).find("tr:last td").addClass("bottom");
+                        $(this).find("tr:odd td").addClass("dark");
+                        $(this).find("tr td:first-child, tr th:first-child").addClass("left");
+                        $(this).find("tr td:last-child, tr th:last-child").addClass("right");
+                    });
+
+                    $(".datatable table.tablesorter").each(function () {
+                        $(this).bind("sortEnd", function () {
+                            $(".datatable").each(function () {
+                                $(this).find("th, td")
+                                    .removeClass("top").removeClass("bottom")
+                                    .removeClass("left").removeClass("right")
+                                    .removeClass("dark");
+                                $(this).find("tr:first th").addClass("top");
+                                $(this).find("tr:last td").addClass("bottom");
+                                $(this).find("tr:odd td").addClass("dark");
+                                $(this).find("tr td:first-child, tr th:first-child").addClass("left");
+                                $(this).find("tr td:last-child, tr th:last-child").addClass("right");
+                            });
+                        });
+                    });
+                }
+        });
+    </script>
+            </div>
+        </div>
+        <script type="application/javascript">
+            $(function() {
+                $(".userListMarker").click(function() {
+                    $.post("/data/lists", {action: "findTouched"}, function(json) {
+                        Codeforces.facebox(".userListsFacebox");
+                        var tbody = $("#facebox tbody");
+                        tbody.empty();
+                        for (var i in json) {
+                            tbody.append(
+                                    $("<tr></tr>").append(
+                                            $("<td></td>").attr("data-readKey", json[i].readKey).text(json[i].name)
+                                    )
+                            );
+                        }
+                        Codeforces.updateDatatables();
+                        tbody.find("td").css("cursor", "pointer").click(function() {
+                            document.location = Codeforces.updateUrlParameter(document.location.href, "list", $(this).attr("data-readKey"));
+                        });
+                    }, "json");
+                });
+            });
+        </script>
+</body>
+</html>
