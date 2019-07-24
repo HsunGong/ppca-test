@@ -4,51 +4,118 @@ ans = []
 
 x = 1
 while x < 1e9:
-    ans.append([x, 3])
+    ans.append([x, 2])
     cnt += 1
-    x *= 3
+    x *= 2
 
-x = 3
-while x < 1e9:
-    ans.append([x, 9])
-    cnt += 1
-    x *= 3**2
 
-x = 27
-while x < 1e9:
-    ans.append([x, 81])
-    cnt += 1
-    x *= 81
+# x = 1
+# while x < 1e9:
+#     ans.append([x, 4])
+#     cnt += 1
+#     x *= 4
 
-x = 9
+x = 1
 while x < 1e9:
-    ans.append([x, 27])
+    ans.append([x, 8])
     cnt += 1
-    x *= 27
+    x *= 8
 
-x = 81
-while x < 1e9:
-    ans.append([x, 243])
-    cnt += 1
-    x *= 243
+# x = 2
+# while x < 1e9:
+#     ans.append([x, 4])
+#     cnt += 1
+#     x *= 4
 
-x = 729
-while x < 1e9:
-    ans.append([x, 2187])
-    cnt += 1
-    x *= 2187
+# x = 2
+# while x < 1e9:
+#     ans.append([x, 8])
+#     cnt += 1
+#     x *= 8
 
-x = 6561
-while x < 1e9:
-    ans.append([x, 19683])
-    cnt += 1
-    x *= 19683
+# x = 2
+# while x < 1e9:
+#     ans.append([x, 32])
+#     cnt += 1
+#     x *= 32
 
-x = 2187
+# x = 4
+# while x < 1e9:
+#     ans.append([x, 16])
+#     cnt += 1
+#     x *= 16
+
+x = 4
 while x < 1e9:
-    ans.append([x, 6561])
+    ans.append([x, 4])
     cnt += 1
-    x *= 6561
+    x *= 4
+
+# x = 4
+# while x < 1e9:
+#     ans.append([x, 8])
+#     cnt += 1
+#     x *= 8
+
+# x = 4
+# while x < 1e9:
+#     ans.append([x, 32])
+#     cnt += 1
+#     x *= 32
+
+# x = 8
+# while x < 1e9:
+#     ans.append([x, 16])
+#     cnt += 1
+#     x *= 16
+
+x = 16
+while x < 1e9:
+    ans.append([x, 2])
+    cnt += 1
+    x *= 2
+
+x = 16
+while x < 1e9:
+    ans.append([x, 32])
+    cnt += 1
+    x *= 32
+
+# x = 8
+# while x < 1e9:
+#     ans.append([x, 32])
+#     cnt += 1
+#     x *= 32
+
+# x = 64
+# while x < 1e9:
+#     ans.append([x, 16])
+#     cnt += 1
+#     x *= 16
+
+# x = 128
+# while x < 1e9:
+#     ans.append([x, 256])
+#     cnt += 1
+#     x *= 256
+
+x = 64
+while x < 1e9:
+    ans.append([x, 512])
+    cnt += 1
+    x *= 512
+
+# x = 16
+# while x < 1e9:
+#     ans.append([x, 32])
+#     cnt += 1
+#     x *= 32
+
+x = 16
+while x < 1e9:
+    ans.append([x, 16])
+    cnt += 1
+    x *= 16
 
 print(cnt)
 for a in ans:
