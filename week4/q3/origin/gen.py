@@ -33,9 +33,6 @@ for file in files:
 
 if path.isdir('../data'):
     fs = listdir('../data')
-    for f in fs:
-        # print(f)
-        remove('../data/'+ f)
 else:
     makedirs('../data')
 
