@@ -10,6 +10,8 @@ if path.isdir('./data'):
     for f in fs:
         if path.splitext(f)[1] == '.in':
             names.append('./data/' + path.splitext(f)[0])
+        else:
+            remove('./data/' + f)
 else:
     raise "not found"
 

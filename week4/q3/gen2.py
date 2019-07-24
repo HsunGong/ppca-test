@@ -4,16 +4,13 @@ from os import path, listdir, makedirs, remove
 
 if path.isdir('./data'):
     fs = listdir('./data')
-    for f in fs:
-        # print(f)
-        remove('./data/'+ f)
 else:
     makedirs('data')
 
 
 
 # True
-cnt=10
+cnt= 6
 k = [99, 100, 100, 100, 100]
 for i in range(len(k)):
     cnt += 1
