@@ -4,29 +4,51 @@ ans = []
 
 x = 1
 while x < 1e9:
-    ans.append([x, 2])
+    ans.append([x, 3])
     cnt += 1
-    x *= 2
+    x *= 3
 
-x = 2
+x = 3
 while x < 1e9:
-    ans.append([x, 4])
+    ans.append([x, 9])
     cnt += 1
-    x *= 4
+    x *= 3**2
 
-x = 8
+x = 27
 while x < 1e9:
-    ans.append([x, 16])
+    ans.append([x, 81])
     cnt += 1
-    x *= 16
+    x *= 81
 
-x = 128
+x = 9
 while x < 1e9:
-    ans.append([x, 256])
+    ans.append([x, 27])
     cnt += 1
-    x *= 256
+    x *= 27
 
+x = 81
+while x < 1e9:
+    ans.append([x, 243])
+    cnt += 1
+    x *= 243
 
+x = 729
+while x < 1e9:
+    ans.append([x, 2187])
+    cnt += 1
+    x *= 2187
+
+x = 6561
+while x < 1e9:
+    ans.append([x, 19683])
+    cnt += 1
+    x *= 19683
+
+x = 2187
+while x < 1e9:
+    ans.append([x, 6561])
+    cnt += 1
+    x *= 6561
 
 print(cnt)
 for a in ans:
