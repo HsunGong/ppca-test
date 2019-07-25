@@ -150,7 +150,7 @@ int run()
 {
     int n;
     cin >> n;
-    printf("Size=%d, ", n);
+    // printf("Size=%d, ", n);
     VL va(n), vb(n);
     repn(i, n) cin >> va[i] >> vb[i];
     VL ps;
@@ -215,9 +215,7 @@ int main()
     // run();
     int cnt = 0;
     cin >> cnt;
-    while (!cin.eof()){
-        cnt ++;
-    // printf("Will print %d: ", cnt);
+    for (int i = 0; i < cnt; i++){
         run();
     }
 }
