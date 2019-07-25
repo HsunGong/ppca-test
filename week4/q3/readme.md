@@ -50,7 +50,7 @@ If the intersection of all progressions is empty, then print  - 1, otherwise
 
 ### 输出
 
-一共$n$行，每行一个整数$t$，$t = x\ mod\ 1e9 + 7$，可行解$x$；如果没有这样的解，输出$-1$。
+一共$n$行，每行一个整数$t$，$t = x \mod 1e9 + 7$，可行解$x$；如果没有这样的解，输出$-1$。
 
 ### 举例
 

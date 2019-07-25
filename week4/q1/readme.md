@@ -31,11 +31,11 @@ Print $P*Q^{-1}\ mod\ 10^9 + 7$
 
 5个数，第一个，半径$R$， 后面四个 $a_1, a_2, a_3, a_4,\ (0 \leq R \leq 50, 1 \leq a_1, a_2, a_3, a_4 \leq 1000)$
 
-$p_i = \frac{a_i}{a_1+a_2+a_3+a_4}$
+$p_i = \dfrac{a_i}{a_1+a_2+a_3+a_4}$
 
 ### 输出
 
-将期望用有理数形式表示 输出 $P*Q^{-1}\ mod\ 10^9 + 7$ , where $Q \neq 0$.
+将期望用有理数形式表示 输出 $P*Q^{-1} \mod 10^9 + 7$ , where $Q \neq 0$.
 
 ### 数据范围
 
@@ -58,7 +58,7 @@ $p_i = \frac{a_i}{a_1+a_2+a_3+a_4}$
 666666674
 
 - 解释：
-P/Q = 8/3, inverse of Q is $(Q*Q^-1) \equiv 1 mod m$
+P/Q = 8/3, inverse of Q is $(Q*Q^{-1}) \equiv 1 \mod m$
 
 ## explain
 
