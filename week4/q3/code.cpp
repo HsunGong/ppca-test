@@ -150,7 +150,7 @@ int run()
 {
     int n;
     cin >> n;
-    // printf("Size=%d, ", n);
+    printf("Size=%d, ", n);
     VL va(n), vb(n);
     repn(i, n) cin >> va[i] >> vb[i];
     VL ps;

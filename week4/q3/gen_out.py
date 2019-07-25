@@ -10,15 +10,15 @@ if path.isdir('./data'):
     for f in fs:
         if path.splitext(f)[1] == '.in':
             names.append('./data/' + path.splitext(f)[0])
-        else:
-            remove('./data/' + f)
+        # else:
+        #     remove('./data/' + f)
 else:
     raise "not found"
 
 name = sorted(names)
 for name in names:
     with open(name + '.in', 'r') as f:
-        f2 = open(name + '.out', 'w+')
+        f2 = open(name + '.dump', 'w+')
         tick = time.time()
         try:
             sub.run('./a.out', stdin=f, stdout=f2, timeout=1.0)
