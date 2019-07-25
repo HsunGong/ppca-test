@@ -10,8 +10,8 @@ else:
 
 
 # True
-cnt= 6
-k = [99, 100, 100, 100, 100]
+cnt= 12
+k = [100, 100, 100, 100, 100]
 for i in range(len(k)):
     cnt += 1
     with open("./data/data-" + str(cnt) + ".in", "w") as f:

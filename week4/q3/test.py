@@ -16,9 +16,10 @@ else:
 name = sorted(names)
 for name in names:
     with open(name + '.in', 'r') as f:
+        f2 = open(name + '.err.out', 'w+')
         tick = time.time()
         try:
-            sub.run('./a.out', stdin=f, stdout=sub.DEVNULL, timeout=1.0)
+            sub.run('./a.out', stdin=f, stdout=f2, timeout=1.0)
         except sub.TimeoutExpired as exp:
             pass
         print(name, time.time() - tick)
