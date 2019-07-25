@@ -27,14 +27,25 @@ else:
     makedirs('data')
 
 
-
 # True
 cnt=0
-k = [49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60]
+k = [3, 5, 19, 20, 20]
 for i in range(len(k)):
     cnt += 1
-    with open("./data/data-" + str(k[i]) + "-" + str(cnt) + ".in", "w") as f:
+    with open("./data/data-"+ str(cnt) + ".in", "w") as f:
         p = numpy.random.randint(1000, size=4)
         s = '{} {} {} {} {}\n'.format(k[i], p[0], p[1], p[2], p[3])
         print(s)
         f.write(s)
+        
+k = [49, 50, 50, 50, 50]
+for i in range(len(k)):
+    cnt += 1
+    with open("./data/data-" + str(cnt) + ".in", "w") as f:
+        p = numpy.random.randint(1000, size=4)
+        s = '{} {} {} {} {}\n'.format(k[i], p[0], p[1], p[2], p[3])
+        print(s)
+        f.write(s)
+
+
+

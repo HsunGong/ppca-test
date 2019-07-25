@@ -28,11 +28,21 @@ If the intersection of all progressions is empty, then print  - 1, otherwise
 
 注意，上述的$i$为整数。
 
-一共有$n$组数据，代表上述问题重复$n$次。注意，$n$不会在输入中给出。
+一共有$n$组数据，代表上述问题重复$n$次。
+
+### 范围
+
+20% $k \leq 3$
+
+35% $k \leq 40$
+
+45% $k \leq 100$
 
 ### 输入
 
-每一组数据形式如下：
+第一行，一个整数$n$， $(1 \leq n \leq 10)$。
+
+之后$n$组，每一组数据形式如下：
 
 第一行，一个整数$k$， $(1 \leq k \leq 100)$。
 
@@ -45,17 +55,20 @@ If the intersection of all progressions is empty, then print  - 1, otherwise
 ### 举例
 
 输入：
+```
+2
 2
 2 2
 4 1
 2
 2 2
 3 3
-
+```
 输出：
+```
 4
 -1
-
+```
 
 ## explain
 

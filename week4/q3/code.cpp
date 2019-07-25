@@ -214,9 +214,10 @@ int main()
 {
     // run();
     int cnt = 0;
+    cin >> cnt;
     while (!cin.eof()){
         cnt ++;
-        // printf("Will print %d: ", cnt);
+    // printf("Will print %d: ", cnt);
         run();
     }
 }
